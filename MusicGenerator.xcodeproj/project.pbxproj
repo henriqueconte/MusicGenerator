@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804B647424436F350066DBCB /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804B647324436F350066DBCB /* ScreenSize.swift */; };
 		8075F5CF243A3309000199BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075F5CE243A3309000199BA /* AppDelegate.swift */; };
 		8075F5D1243A3309000199BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075F5D0243A3309000199BA /* SceneDelegate.swift */; };
 		8075F5D3243A3309000199BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075F5D2243A3309000199BA /* ContentView.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		804B647324436F350066DBCB /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
+		804B64752443AF8D0066DBCB /* MusicGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MusicGenerator.entitlements; sourceTree = "<group>"; };
 		8075F5CB243A3309000199BA /* MusicGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8075F5CE243A3309000199BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8075F5D0243A3309000199BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +40,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804B647124436EE10066DBCB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8075F5D0243A3309000199BA /* SceneDelegate.swift */,
+				8075F5CE243A3309000199BA /* AppDelegate.swift */,
+				8075F5D4243A330B000199BA /* Assets.xcassets */,
+				8075F5D9243A330B000199BA /* LaunchScreen.storyboard */,
+				804B647324436F350066DBCB /* ScreenSize.swift */,
+				8075F5DC243A330B000199BA /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		8075F5C2243A3309000199BA = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +72,11 @@
 		8075F5CD243A3309000199BA /* MusicGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				804B64752443AF8D0066DBCB /* MusicGenerator.entitlements */,
+				804B647124436EE10066DBCB /* Support */,
 				8075F5E4243A3397000199BA /* Controller */,
 				8075F5E3243A3393000199BA /* Model */,
 				8075F5E2243A3384000199BA /* View */,
-				8075F5CE243A3309000199BA /* AppDelegate.swift */,
-				8075F5D0243A3309000199BA /* SceneDelegate.swift */,
-				8075F5D2243A3309000199BA /* ContentView.swift */,
-				8075F5D4243A330B000199BA /* Assets.xcassets */,
-				8075F5D9243A330B000199BA /* LaunchScreen.storyboard */,
-				8075F5DC243A330B000199BA /* Info.plist */,
 				8075F5D6243A330B000199BA /* Preview Content */,
 			);
 			path = MusicGenerator;
@@ -81,6 +93,7 @@
 		8075F5E2243A3384000199BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8075F5D2243A3309000199BA /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +185,7 @@
 			files = (
 				8075F5CF243A3309000199BA /* AppDelegate.swift in Sources */,
 				8075F5D1243A3309000199BA /* SceneDelegate.swift in Sources */,
+				804B647424436F350066DBCB /* ScreenSize.swift in Sources */,
 				8075F5D3243A3309000199BA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MusicGenerator/MusicGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicGenerator/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NP5AK64M5;
@@ -319,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = henriqueConte.MusicGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MusicGenerator/MusicGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MusicGenerator/Preview Content\"";
 				DEVELOPMENT_TEAM = 4NP5AK64M5;
@@ -339,6 +356,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = henriqueConte.MusicGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
