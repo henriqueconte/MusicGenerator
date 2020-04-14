@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zli-Eb-0Ag">
+    <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Screen View-->
+        <scene sceneID="UvJ-Fh-jgV">
+            <objects>
+                <viewController id="Zli-Eb-0Ag" customClass="MainScreenView" customModule="MusicGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YRB-en-EIi">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barBackground" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-7R-wRe">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQX-CI-D9H">
+                                <rect key="frame" x="111" y="283.5" width="890" height="58.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caseBackground" translatesAutoresizingMaskIntoConstraints="NO" id="AII-W0-x8z">
+                                <rect key="frame" x="111" y="667" width="890" height="167"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW7-Xp-Ykf">
+                                <rect key="frame" x="144.5" y="695" width="111.5" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rW7-Xp-Ykf" secondAttribute="height" multiplier="1:1" id="WWx-9D-Oq7"/>
+                                </constraints>
+                                <state key="normal" image="playIcon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-zB-dzV">
+                                <rect key="frame" x="266" y="695" width="111" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Ab-zB-dzV" secondAttribute="height" multiplier="1:1" id="Vv1-rM-wgQ"/>
+                                </constraints>
+                                <state key="normal" image="stopIcon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fl-Zy-NQO">
+                                <rect key="frame" x="859.5" y="695" width="111.5" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8fl-Zy-NQO" secondAttribute="height" multiplier="1:1" id="gRK-kC-SAZ"/>
+                                </constraints>
+                                <state key="normal" image="pauseIcon"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8fl-Zy-NQO" firstAttribute="centerY" secondItem="AII-W0-x8z" secondAttribute="centerY" id="3av-bn-8al"/>
+                            <constraint firstItem="9Ab-zB-dzV" firstAttribute="width" secondItem="rW7-Xp-Ykf" secondAttribute="width" id="420-9e-oa6"/>
+                            <constraint firstItem="G2Y-AV-obj" firstAttribute="bottom" secondItem="mFW-7R-wRe" secondAttribute="bottom" id="4HZ-SN-z4N"/>
+                            <constraint firstItem="AII-W0-x8z" firstAttribute="height" secondItem="YRB-en-EIi" secondAttribute="height" multiplier="0.2" id="6R5-Yc-T47"/>
+                            <constraint firstItem="8fl-Zy-NQO" firstAttribute="width" secondItem="rW7-Xp-Ykf" secondAttribute="width" id="9h5-bp-aPc"/>
+                            <constraint firstItem="AII-W0-x8z" firstAttribute="centerX" secondItem="YRB-en-EIi" secondAttribute="centerX" id="9vb-tq-ndQ"/>
+                            <constraint firstItem="rW7-Xp-Ykf" firstAttribute="centerY" secondItem="AII-W0-x8z" secondAttribute="centerY" id="KBM-AE-GPh"/>
+                            <constraint firstItem="MQX-CI-D9H" firstAttribute="centerY" secondItem="YRB-en-EIi" secondAttribute="centerY" multiplier="0.75" id="PQZ-Rz-hbM"/>
+                            <constraint firstItem="AII-W0-x8z" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.8" id="RIM-3V-ngl"/>
+                            <constraint firstItem="9Ab-zB-dzV" firstAttribute="leading" secondItem="rW7-Xp-Ykf" secondAttribute="trailing" constant="10" id="SE7-eh-vuE"/>
+                            <constraint firstItem="rW7-Xp-Ykf" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.1" id="VWy-eX-OzJ"/>
+                            <constraint firstItem="rW7-Xp-Ykf" firstAttribute="leading" secondItem="AII-W0-x8z" secondAttribute="leading" multiplier="1.3" id="gIh-G0-tZh"/>
+                            <constraint firstItem="MQX-CI-D9H" firstAttribute="height" secondItem="YRB-en-EIi" secondAttribute="height" multiplier="0.07" id="hnm-T7-pfJ"/>
+                            <constraint firstItem="MQX-CI-D9H" firstAttribute="centerX" secondItem="YRB-en-EIi" secondAttribute="centerX" id="kHi-dq-7PT"/>
+                            <constraint firstItem="G2Y-AV-obj" firstAttribute="bottom" secondItem="AII-W0-x8z" secondAttribute="bottom" id="oUK-49-YB5"/>
+                            <constraint firstItem="MQX-CI-D9H" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.8" id="qsU-FA-2Rz"/>
+                            <constraint firstItem="mFW-7R-wRe" firstAttribute="top" secondItem="G2Y-AV-obj" secondAttribute="top" id="tKU-Ha-HB6"/>
+                            <constraint firstItem="mFW-7R-wRe" firstAttribute="leading" secondItem="G2Y-AV-obj" secondAttribute="leading" id="u79-KB-IiU"/>
+                            <constraint firstItem="G2Y-AV-obj" firstAttribute="trailing" secondItem="mFW-7R-wRe" secondAttribute="trailing" id="udZ-fp-XfR"/>
+                            <constraint firstItem="9Ab-zB-dzV" firstAttribute="centerY" secondItem="AII-W0-x8z" secondAttribute="centerY" id="xv4-HO-fF1"/>
+                            <constraint firstItem="8fl-Zy-NQO" firstAttribute="trailing" secondItem="AII-W0-x8z" secondAttribute="trailing" multiplier="0.97" id="yr3-JC-PJx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G2Y-AV-obj"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="mFW-7R-wRe" id="q3t-2B-VhK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGu-3R-KSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4548.0215827338134" y="-3389.2086330935253"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barBackground" width="2560" height="1600"/>
+        <image name="caseBackground" width="2638" height="422"/>
+        <image name="pauseIcon" width="240" height="240"/>
+        <image name="playIcon" width="240" height="240"/>
+        <image name="stopIcon" width="240" height="240"/>
+    </resources>
+</document>
