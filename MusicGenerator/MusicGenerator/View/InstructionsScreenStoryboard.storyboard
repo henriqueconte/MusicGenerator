@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Instructions View-->
+        <scene sceneID="LY3-IG-UEb">
+            <objects>
+                <viewController id="l3l-mC-47p" customClass="InstructionsView" customModule="MusicGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ix6-CF-EAy">
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aEr-rr-4XT">
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RVM-H4-mW4" firstAttribute="trailing" secondItem="aEr-rr-4XT" secondAttribute="trailing" id="0Uh-PJ-efR"/>
+                            <constraint firstItem="RVM-H4-mW4" firstAttribute="bottom" secondItem="aEr-rr-4XT" secondAttribute="bottom" id="K4N-DW-9Gw"/>
+                            <constraint firstItem="aEr-rr-4XT" firstAttribute="leading" secondItem="RVM-H4-mW4" secondAttribute="leading" id="OhV-eo-x2z"/>
+                            <constraint firstItem="aEr-rr-4XT" firstAttribute="top" secondItem="RVM-H4-mW4" secondAttribute="top" id="y6o-G6-KOR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RVM-H4-mW4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKp-U2-snV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="-170"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barBackground" width="2560" height="1600"/>
+    </resources>
+</document>

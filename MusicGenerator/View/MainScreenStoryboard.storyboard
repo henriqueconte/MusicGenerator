@@ -73,6 +73,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G2Y-AV-obj"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="mFW-7R-wRe" id="Uft-8L-mnx"/>
+                        <outlet property="caseBackgroundImage" destination="AII-W0-x8z" id="5Cb-Wv-Mww"/>
+                        <outlet property="generateSongButton" destination="8fl-Zy-NQO" id="hOY-bc-EsO"/>
+                        <outlet property="inputTextfield" destination="MQX-CI-D9H" id="E0j-tM-BKr"/>
+                        <outlet property="playButton" destination="rW7-Xp-Ykf" id="ehE-uQ-NmG"/>
+                        <outlet property="stopButton" destination="9Ab-zB-dzV" id="qCN-ex-4Ie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGu-3R-KSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
