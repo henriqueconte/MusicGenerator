@@ -15,6 +15,8 @@
 		804300C0244609F00040E719 /* MainScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */; };
 		804300C2244609F50040E719 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804300C1244609F50040E719 /* MainScreenView.swift */; };
 		8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F2244DEFC900E00E80 /* TextGenerator.swift */; };
+		8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F4244F4A3200E00E80 /* TextReader.swift */; };
+		8090F5F7244F4C2000E00E80 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */; };
 		80EA24C624460E7100F04808 /* InstructionsScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EA24C524460E7100F04808 /* InstructionsScreenStoryboard.storyboard */; };
 		80EA24C824460E8C00F04808 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA24C724460E8C00F04808 /* InstructionsView.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,8 @@
 		804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainScreenStoryboard.storyboard; path = View/MainScreenStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		804300C1244609F50040E719 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreenView.swift; path = View/MainScreenView.swift; sourceTree = SOURCE_ROOT; };
 		8090F5F2244DEFC900E00E80 /* TextGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextGenerator.swift; path = Controller/TextGenerator.swift; sourceTree = SOURCE_ROOT; };
+		8090F5F4244F4A3200E00E80 /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextReader.swift; path = Controller/TextReader.swift; sourceTree = SOURCE_ROOT; };
+		8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Controller/SoundPlayer.swift; sourceTree = SOURCE_ROOT; };
 		80EA24C524460E7100F04808 /* InstructionsScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructionsScreenStoryboard.storyboard; sourceTree = "<group>"; };
 		80EA24C724460E8C00F04808 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		80FB4327244601C000F54884 /* MusicGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				8090F5F2244DEFC900E00E80 /* TextGenerator.swift */,
+				8090F5F4244F4A3200E00E80 /* TextReader.swift */,
+				8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,8 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				804300BA244609D60040E719 /* AppDelegate.swift in Sources */,
+				8090F5F7244F4C2000E00E80 /* SoundPlayer.swift in Sources */,
 				80EA24C824460E8C00F04808 /* InstructionsView.swift in Sources */,
 				8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */,
+				8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */,
 				804300C2244609F50040E719 /* MainScreenView.swift in Sources */,
 				804300BE244609E00040E719 /* SceneDelegate.swift in Sources */,
 			);

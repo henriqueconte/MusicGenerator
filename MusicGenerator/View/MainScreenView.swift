@@ -16,13 +16,28 @@ class MainScreenView: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var generateSongButton: UIButton!
+    
     let textGenerator = TextGenerator()
+    let textReader = TextReader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputTextfield.delegate = self
         // Do any additional setup after loading the view.
-        textGenerator.generateText()
     }
+
+    @IBAction func generateButton(_ sender: Any) {
+        let receivedText = textGenerator.generateText()
+        
+        inputTextfield.text = receivedText
+    }
+    
+    @IBAction func play(_ sender: Any) {
+        let currentText = inputTextfield.text
+        
+        textReader.read(currentText ?? "")
+    }
+    
 
 }
 

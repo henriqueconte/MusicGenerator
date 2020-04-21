@@ -14,7 +14,7 @@ class TextGenerator {
     func generateText() -> String {
         
         var finalText: String = ""
-        let letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 +-?.\\"
+        let letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-?.\\ "
         
         finalText = String((0..<100).map({ _ in
             (letters.randomElement()!)
