@@ -137,37 +137,37 @@ class TextReader {
     func getNote(from letter: String) {
         if letter == "A" || letter == "a" {
             //print("A")
-            soundPlayer.play(noteName: "pianoA")
+            soundPlayer.play(noteName: "A")
         }
         
         // Si
         else if letter == "B" || letter == "b" {
-            soundPlayer.play(noteName: "pianoA")
+            soundPlayer.play(noteName: "B")
         }
         
         // Dó
         else if letter == "C" || letter == "c" {
-            soundPlayer.play(noteName: "pianoA")
+            soundPlayer.play(noteName: "C")
         }
             
         // Ré
         else if letter == "D" || letter == "d" {
-            print("D")
+            soundPlayer.play(noteName: "D")
         }
         
         // Mi
         else if letter == "E" || letter == "e" {
-            print("E")
+            soundPlayer.play(noteName: "E")
         }
         
         // Fá
         else if letter == "F" || letter == "f" {
-            print("F")
+            soundPlayer.play(noteName: "F")
         }
             
         // Sol
         else if letter == "G" || letter == "g" {
-            print("G")
+            soundPlayer.play(noteName: "G")
         }
         
         // Silence

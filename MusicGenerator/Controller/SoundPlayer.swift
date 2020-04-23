@@ -16,9 +16,10 @@ class SoundPlayer {
     private let speedControl = AVAudioUnitVarispeed()
     private let pitchControl = AVAudioUnitTimePitch()
     private let audioPlayer = AVAudioPlayerNode()
+    var currentInstrument: Instruments = .guitar
+    var volume: Float = 0.4
     
     init() {
-        
          // 1: connect the components to our playback engine
         engine.attach(audioPlayer)
         engine.attach(pitchControl)
@@ -35,13 +36,38 @@ class SoundPlayer {
     }
     
     func play(noteName: String) {
-        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteName, ofType: "m4a")!))
         
-        audioPlayer.volume = 1
+        let noteFileName = currentInstrument.rawValue + noteName
+        
+        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteFileName, ofType: "m4a")!))
+        
+        audioPlayer.volume = volume
         
         audioPlayer.scheduleFile(audioFile!, at: nil)
         
         try? engine.start()
         audioPlayer.play()
     }
+    
+    func silence() {
+        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "pianoA", ofType: "m4a")!))
+        
+        audioPlayer.volume = 0
+        
+        audioPlayer.scheduleFile(audioFile!, at: nil)
+        
+        try? engine.start()
+        audioPlayer.play()
+    }
+    
+    func toggleInstrument() {
+        if currentInstrument == .piano {
+            currentInstrument = .guitar
+        }
+        else {
+            currentInstrument = .piano
+        }
+    }
+    
+    
 }

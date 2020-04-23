@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+enum Instruments: String {
+    case piano = "piano"
+    case guitar = "guitar"
+}

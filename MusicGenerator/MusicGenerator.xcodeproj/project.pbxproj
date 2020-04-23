@@ -14,20 +14,20 @@
 		804300BE244609E00040E719 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804300BD244609E00040E719 /* SceneDelegate.swift */; };
 		804300C0244609F00040E719 /* MainScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */; };
 		804300C2244609F50040E719 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804300C1244609F50040E719 /* MainScreenView.swift */; };
-		805CF1E5245134490099703D /* pianoF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1D8245134480099703D /* pianoF.m4a */; };
-		805CF1E8245134490099703D /* pianoE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DB245134480099703D /* pianoE.m4a */; };
-		805CF1E9245134490099703D /* pianoC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DC245134480099703D /* pianoC.m4a */; };
-		805CF1EA245134490099703D /* pianoD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DD245134480099703D /* pianoD.m4a */; };
-		805CF1EB245134490099703D /* pianoA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DE245134480099703D /* pianoA.m4a */; };
-		805CF1EC245134490099703D /* pianoB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DF245134480099703D /* pianoB.m4a */; };
-		805CF1F0245134490099703D /* pianoG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1E3245134490099703D /* pianoG.m4a */; };
-		805CF1FF245134860099703D /* acousticGuitarA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F2245134850099703D /* acousticGuitarA.m4a */; };
-		805CF200245134860099703D /* acousticGuitarE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F3245134850099703D /* acousticGuitarE.m4a */; };
-		805CF201245134860099703D /* acousticGuitarD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F4245134850099703D /* acousticGuitarD.m4a */; };
-		805CF202245134860099703D /* acousticGuitarC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F5245134850099703D /* acousticGuitarC.m4a */; };
-		805CF205245134860099703D /* acousticGuitarF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F8245134860099703D /* acousticGuitarF.m4a */; };
-		805CF206245134860099703D /* acousticGuitarB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F9245134860099703D /* acousticGuitarB.m4a */; };
-		805CF20A245134860099703D /* acousticGuitarG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1FD245134860099703D /* acousticGuitarG.m4a */; };
+		805CF1E5245134490099703D /* pianoD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1D8245134480099703D /* pianoD.m4a */; };
+		805CF1E8245134490099703D /* pianoC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DB245134480099703D /* pianoC.m4a */; };
+		805CF1E9245134490099703D /* pianoA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DC245134480099703D /* pianoA.m4a */; };
+		805CF1EA245134490099703D /* pianoB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DD245134480099703D /* pianoB.m4a */; };
+		805CF1EB245134490099703D /* pianoF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DE245134480099703D /* pianoF.m4a */; };
+		805CF1EC245134490099703D /* pianoG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DF245134480099703D /* pianoG.m4a */; };
+		805CF1F0245134490099703D /* pianoE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1E3245134490099703D /* pianoE.m4a */; };
+		805CF1FF245134860099703D /* guitarF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F2245134850099703D /* guitarF.m4a */; };
+		805CF200245134860099703D /* guitarC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F3245134850099703D /* guitarC.m4a */; };
+		805CF201245134860099703D /* guitarB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F4245134850099703D /* guitarB.m4a */; };
+		805CF202245134860099703D /* guitarA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F5245134850099703D /* guitarA.m4a */; };
+		805CF205245134860099703D /* guitarD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F8245134860099703D /* guitarD.m4a */; };
+		805CF206245134860099703D /* guitarG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1F9245134860099703D /* guitarG.m4a */; };
+		805CF20A245134860099703D /* guitarE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1FD245134860099703D /* guitarE.m4a */; };
 		805CF210245142350099703D /* Instruments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CF20F245142350099703D /* Instruments.swift */; };
 		8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F2244DEFC900E00E80 /* TextGenerator.swift */; };
 		8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F4244F4A3200E00E80 /* TextReader.swift */; };
@@ -45,20 +45,20 @@
 		804300BD244609E00040E719 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Support/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainScreenStoryboard.storyboard; path = View/MainScreenStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		804300C1244609F50040E719 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreenView.swift; path = View/MainScreenView.swift; sourceTree = SOURCE_ROOT; };
-		805CF1D8245134480099703D /* pianoF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoF.m4a; path = Normal/pianoF.m4a; sourceTree = "<group>"; };
-		805CF1DB245134480099703D /* pianoE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoE.m4a; path = Normal/pianoE.m4a; sourceTree = "<group>"; };
-		805CF1DC245134480099703D /* pianoC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoC.m4a; path = Normal/pianoC.m4a; sourceTree = "<group>"; };
-		805CF1DD245134480099703D /* pianoD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoD.m4a; path = Normal/pianoD.m4a; sourceTree = "<group>"; };
-		805CF1DE245134480099703D /* pianoA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoA.m4a; path = Normal/pianoA.m4a; sourceTree = "<group>"; };
-		805CF1DF245134480099703D /* pianoB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoB.m4a; path = Normal/pianoB.m4a; sourceTree = "<group>"; };
-		805CF1E3245134490099703D /* pianoG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoG.m4a; path = Normal/pianoG.m4a; sourceTree = "<group>"; };
-		805CF1F2245134850099703D /* acousticGuitarA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarA.m4a; path = Normal/acousticGuitarA.m4a; sourceTree = "<group>"; };
-		805CF1F3245134850099703D /* acousticGuitarE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarE.m4a; path = Normal/acousticGuitarE.m4a; sourceTree = "<group>"; };
-		805CF1F4245134850099703D /* acousticGuitarD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarD.m4a; path = Normal/acousticGuitarD.m4a; sourceTree = "<group>"; };
-		805CF1F5245134850099703D /* acousticGuitarC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarC.m4a; path = Normal/acousticGuitarC.m4a; sourceTree = "<group>"; };
-		805CF1F8245134860099703D /* acousticGuitarF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarF.m4a; path = Normal/acousticGuitarF.m4a; sourceTree = "<group>"; };
-		805CF1F9245134860099703D /* acousticGuitarB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarB.m4a; path = Normal/acousticGuitarB.m4a; sourceTree = "<group>"; };
-		805CF1FD245134860099703D /* acousticGuitarG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = acousticGuitarG.m4a; path = Normal/acousticGuitarG.m4a; sourceTree = "<group>"; };
+		805CF1D8245134480099703D /* pianoD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoD.m4a; path = Normal/pianoD.m4a; sourceTree = "<group>"; };
+		805CF1DB245134480099703D /* pianoC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoC.m4a; path = Normal/pianoC.m4a; sourceTree = "<group>"; };
+		805CF1DC245134480099703D /* pianoA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoA.m4a; path = Normal/pianoA.m4a; sourceTree = "<group>"; };
+		805CF1DD245134480099703D /* pianoB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoB.m4a; path = Normal/pianoB.m4a; sourceTree = "<group>"; };
+		805CF1DE245134480099703D /* pianoF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoF.m4a; path = Normal/pianoF.m4a; sourceTree = "<group>"; };
+		805CF1DF245134480099703D /* pianoG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoG.m4a; path = Normal/pianoG.m4a; sourceTree = "<group>"; };
+		805CF1E3245134490099703D /* pianoE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoE.m4a; path = Normal/pianoE.m4a; sourceTree = "<group>"; };
+		805CF1F2245134850099703D /* guitarF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarF.m4a; path = Normal/guitarF.m4a; sourceTree = "<group>"; };
+		805CF1F3245134850099703D /* guitarC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarC.m4a; path = Normal/guitarC.m4a; sourceTree = "<group>"; };
+		805CF1F4245134850099703D /* guitarB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarB.m4a; path = Normal/guitarB.m4a; sourceTree = "<group>"; };
+		805CF1F5245134850099703D /* guitarA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarA.m4a; path = Normal/guitarA.m4a; sourceTree = "<group>"; };
+		805CF1F8245134860099703D /* guitarD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarD.m4a; path = Normal/guitarD.m4a; sourceTree = "<group>"; };
+		805CF1F9245134860099703D /* guitarG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarG.m4a; path = Normal/guitarG.m4a; sourceTree = "<group>"; };
+		805CF1FD245134860099703D /* guitarE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = guitarE.m4a; path = Normal/guitarE.m4a; sourceTree = "<group>"; };
 		805CF20F245142350099703D /* Instruments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruments.swift; sourceTree = "<group>"; };
 		8090F5F2244DEFC900E00E80 /* TextGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextGenerator.swift; path = Controller/TextGenerator.swift; sourceTree = SOURCE_ROOT; };
 		8090F5F4244F4A3200E00E80 /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextReader.swift; path = Controller/TextReader.swift; sourceTree = SOURCE_ROOT; };
@@ -123,13 +123,13 @@
 		805CF19C245132F00099703D /* Piano */ = {
 			isa = PBXGroup;
 			children = (
-				805CF1DE245134480099703D /* pianoA.m4a */,
-				805CF1DF245134480099703D /* pianoB.m4a */,
-				805CF1DC245134480099703D /* pianoC.m4a */,
-				805CF1DD245134480099703D /* pianoD.m4a */,
-				805CF1DB245134480099703D /* pianoE.m4a */,
-				805CF1D8245134480099703D /* pianoF.m4a */,
-				805CF1E3245134490099703D /* pianoG.m4a */,
+				805CF1DE245134480099703D /* pianoF.m4a */,
+				805CF1DF245134480099703D /* pianoG.m4a */,
+				805CF1DC245134480099703D /* pianoA.m4a */,
+				805CF1DD245134480099703D /* pianoB.m4a */,
+				805CF1DB245134480099703D /* pianoC.m4a */,
+				805CF1D8245134480099703D /* pianoD.m4a */,
+				805CF1E3245134490099703D /* pianoE.m4a */,
 			);
 			path = Piano;
 			sourceTree = "<group>";
@@ -137,13 +137,13 @@
 		805CF19D245132F80099703D /* Guitar */ = {
 			isa = PBXGroup;
 			children = (
-				805CF1F2245134850099703D /* acousticGuitarA.m4a */,
-				805CF1F9245134860099703D /* acousticGuitarB.m4a */,
-				805CF1F5245134850099703D /* acousticGuitarC.m4a */,
-				805CF1F4245134850099703D /* acousticGuitarD.m4a */,
-				805CF1F3245134850099703D /* acousticGuitarE.m4a */,
-				805CF1F8245134860099703D /* acousticGuitarF.m4a */,
-				805CF1FD245134860099703D /* acousticGuitarG.m4a */,
+				805CF1F2245134850099703D /* guitarF.m4a */,
+				805CF1F9245134860099703D /* guitarG.m4a */,
+				805CF1F5245134850099703D /* guitarA.m4a */,
+				805CF1F4245134850099703D /* guitarB.m4a */,
+				805CF1F3245134850099703D /* guitarC.m4a */,
+				805CF1F8245134860099703D /* guitarD.m4a */,
+				805CF1FD245134860099703D /* guitarE.m4a */,
 			);
 			path = Guitar;
 			sourceTree = "<group>";
@@ -245,25 +245,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805CF205245134860099703D /* acousticGuitarF.m4a in Resources */,
-				805CF1EC245134490099703D /* pianoB.m4a in Resources */,
-				805CF1E9245134490099703D /* pianoC.m4a in Resources */,
+				805CF205245134860099703D /* guitarD.m4a in Resources */,
+				805CF1EC245134490099703D /* pianoG.m4a in Resources */,
+				805CF1E9245134490099703D /* pianoA.m4a in Resources */,
 				804300C0244609F00040E719 /* MainScreenStoryboard.storyboard in Resources */,
 				804300B8244609C20040E719 /* Main.storyboard in Resources */,
-				805CF1E8245134490099703D /* pianoE.m4a in Resources */,
-				805CF206245134860099703D /* acousticGuitarB.m4a in Resources */,
-				805CF201245134860099703D /* acousticGuitarD.m4a in Resources */,
+				805CF1E8245134490099703D /* pianoC.m4a in Resources */,
+				805CF206245134860099703D /* guitarG.m4a in Resources */,
+				805CF201245134860099703D /* guitarB.m4a in Resources */,
 				80EA24C624460E7100F04808 /* InstructionsScreenStoryboard.storyboard in Resources */,
-				805CF202245134860099703D /* acousticGuitarC.m4a in Resources */,
-				805CF20A245134860099703D /* acousticGuitarG.m4a in Resources */,
+				805CF202245134860099703D /* guitarA.m4a in Resources */,
+				805CF20A245134860099703D /* guitarE.m4a in Resources */,
 				804300BC244609DC0040E719 /* Assets.xcassets in Resources */,
-				805CF1FF245134860099703D /* acousticGuitarA.m4a in Resources */,
-				805CF200245134860099703D /* acousticGuitarE.m4a in Resources */,
+				805CF1FF245134860099703D /* guitarF.m4a in Resources */,
+				805CF200245134860099703D /* guitarC.m4a in Resources */,
 				804300B5244609BC0040E719 /* LaunchScreen.storyboard in Resources */,
-				805CF1EA245134490099703D /* pianoD.m4a in Resources */,
-				805CF1EB245134490099703D /* pianoA.m4a in Resources */,
-				805CF1F0245134490099703D /* pianoG.m4a in Resources */,
-				805CF1E5245134490099703D /* pianoF.m4a in Resources */,
+				805CF1EA245134490099703D /* pianoB.m4a in Resources */,
+				805CF1EB245134490099703D /* pianoF.m4a in Resources */,
+				805CF1F0245134490099703D /* pianoE.m4a in Resources */,
+				805CF1E5245134490099703D /* pianoD.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
