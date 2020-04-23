@@ -14,7 +14,7 @@ class TextReader {
     var notes: [Character] = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g"]
     var stringCount: Int = 0
     var lastRead: Character = " "
-    
+    let soundPlayer = SoundPlayer()
     
     func read(_ currentString: String) {
         
@@ -136,17 +136,18 @@ class TextReader {
     
     func getNote(from letter: String) {
         if letter == "A" || letter == "a" {
-            print("A")
+            //print("A")
+            soundPlayer.play(noteName: "pianoA")
         }
         
         // Si
         else if letter == "B" || letter == "b" {
-            print("B")
+            soundPlayer.play(noteName: "pianoA")
         }
         
         // Dó
         else if letter == "C" || letter == "c" {
-            print("C")
+            soundPlayer.play(noteName: "pianoA")
         }
             
         // Ré
