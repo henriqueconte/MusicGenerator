@@ -83,7 +83,7 @@ class TextReader {
         if charsArray.count == 1 {
             
             let finalString = String(charsArray[0])
-            getNote(from: finalString)
+            playNote(from: finalString)
       
         }
         
@@ -98,13 +98,13 @@ class TextReader {
                 
                 stringCount += 1
                 
-                getNote(from: finalString)
+                playNote(from: finalString)
             }
             else {
                 
                 let finalString = String(charsArray[0])
                 
-                getNote(from: finalString)
+                playNote(from: finalString)
             }
             
         }
@@ -120,7 +120,7 @@ class TextReader {
                 
                 stringCount += 1
                 
-                getNote(from: finalString)
+                playNote(from: finalString)
             }
             
             else {
@@ -128,13 +128,13 @@ class TextReader {
                 
                 lastRead = charsArray[0]
                 
-                getNote(from: finalString)
+                playNote(from: finalString)
             }
         }
         
     }
     
-    func getNote(from letter: String) {
+    func playNote(from letter: String) {
         if letter == "A" || letter == "a" {
             //print("A")
             soundPlayer.play(noteName: "A")
@@ -172,7 +172,7 @@ class TextReader {
         
         // Silence
         else if letter == " " {
-            print(" ")
+            soundPlayer.silence()
         }
         
         // Double volume
@@ -214,7 +214,7 @@ class TextReader {
         else if letter == "O" || letter == "o" || letter == "I" || letter == "i" || letter == "U" || letter == "u" {
             
             if notes.contains(lastRead) {
-                getNote(from: String(lastRead))
+                playNote(from: String(lastRead))
             }
             else {
                 // silence

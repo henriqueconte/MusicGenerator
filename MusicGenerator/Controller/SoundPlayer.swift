@@ -50,10 +50,8 @@ class SoundPlayer {
     }
     
     func silence() {
-        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "pianoA", ofType: "m4a")!))
-        
-        audioPlayer.volume = 0
-        
+        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "silenceNote", ofType: "mp3")!))
+
         audioPlayer.scheduleFile(audioFile!, at: nil)
         
         try? engine.start()
