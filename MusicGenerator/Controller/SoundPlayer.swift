@@ -16,8 +16,8 @@ class SoundPlayer {
     private let speedControl = AVAudioUnitVarispeed()
     private let pitchControl = AVAudioUnitTimePitch()
     private let audioPlayer = AVAudioPlayerNode()
-    var currentInstrument: Instruments = .guitar
-    var volume: Float = 0.4
+    private var currentInstrument: Instruments = .guitar
+    private var volume: Float = 0.4
     
     init() {
          // 1: connect the components to our playback engine
@@ -35,24 +35,31 @@ class SoundPlayer {
         
     }
     
-    func play(noteName: String) {
+    func play(noteName: String, completion: @escaping () -> ()) {
         
         let noteFileName = currentInstrument.rawValue + noteName
-        
         let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteFileName, ofType: "m4a")!))
-        
+        let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
+
         audioPlayer.volume = volume
         
         audioPlayer.scheduleFile(audioFile!, at: nil)
+        audioPlayer.scheduleBuffer(buffer!) {
+            completion()
+        }
         
         try? engine.start()
         audioPlayer.play()
     }
     
-    func silence() {
+    func silence(completion: @escaping () -> ()) {
         let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "silenceNote", ofType: "mp3")!))
-
+        let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
+        
         audioPlayer.scheduleFile(audioFile!, at: nil)
+        audioPlayer.scheduleBuffer(buffer!, completionHandler: {
+            completion()
+        })
         
         try? engine.start()
         audioPlayer.play()
@@ -64,6 +71,22 @@ class SoundPlayer {
         }
         else {
             currentInstrument = .piano
+        }
+    }
+    
+    func increaseVolume() {
+        volume = volume * 2
+        
+        if volume > 1 {
+            volume = 1
+        }
+    }
+    
+    func decreaseVolume() {
+        volume = volume / 2
+        
+        if volume < 0.05 {
+            volume = 0.05
         }
     }
     

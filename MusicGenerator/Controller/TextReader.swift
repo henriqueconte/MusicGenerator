@@ -15,6 +15,7 @@ class TextReader {
     var stringCount: Int = 0
     var lastRead: Character = " "
     let soundPlayer = SoundPlayer()
+    let semaphore = DispatchSemaphore(value: 1)
     
     func read(_ currentString: String) {
         
@@ -49,6 +50,7 @@ class TextReader {
                 ]
                 
                 parseText(stringPart)
+                semaphore.wait()
             }
             
             // First character
@@ -60,6 +62,7 @@ class TextReader {
                 ]
             
                 parseText(stringPart)
+                semaphore.wait()
             }
         
             // Other options
@@ -71,6 +74,7 @@ class TextReader {
                 ]
                 
                 parseText(stringPart)
+                semaphore.wait()
             }
             
         }
@@ -137,77 +141,106 @@ class TextReader {
     func playNote(from letter: String) {
         if letter == "A" || letter == "a" {
             //print("A")
-            soundPlayer.play(noteName: "A")
+            soundPlayer.play(noteName: "A", completion: {
+                self.semaphore.signal()
+            })
         }
         
         // Si
         else if letter == "B" || letter == "b" {
-            soundPlayer.play(noteName: "B")
+            soundPlayer.play(noteName: "B", completion: {
+                self.semaphore.signal()
+            })
         }
         
         // Dó
         else if letter == "C" || letter == "c" {
-            soundPlayer.play(noteName: "C")
+            soundPlayer.play(noteName: "C", completion: {
+               self.semaphore.signal()
+            })
         }
             
         // Ré
         else if letter == "D" || letter == "d" {
-            soundPlayer.play(noteName: "D")
+            soundPlayer.play(noteName: "D", completion: {
+                self.semaphore.signal()
+            })
         }
         
         // Mi
         else if letter == "E" || letter == "e" {
-            soundPlayer.play(noteName: "E")
+            soundPlayer.play(noteName: "E", completion: {
+                self.semaphore.signal()
+            })
         }
         
         // Fá
         else if letter == "F" || letter == "f" {
-            soundPlayer.play(noteName: "F")
+            soundPlayer.play(noteName: "F", completion: {
+                self.semaphore.signal()
+            })
         }
             
         // Sol
         else if letter == "G" || letter == "g" {
-            soundPlayer.play(noteName: "G")
+            soundPlayer.play(noteName: "G", completion: {
+                self.semaphore.signal()
+            })
         }
         
         // Silence
         else if letter == " " {
-            soundPlayer.silence()
+            soundPlayer.silence(completion: {
+                self.semaphore.signal()
+            })
         }
         
         // Double volume
         else if letter == "+" {
-            print("+")
+            soundPlayer.increaseVolume()
+            self.semaphore.signal()
         }
         
         // Half volume
         else if letter == "-" {
-            print("-")
+            soundPlayer.decreaseVolume()
+            self.semaphore.signal()
+        }
+            
+        else if letter == "—" {
+            soundPlayer.decreaseVolume()
+            soundPlayer.decreaseVolume()
+            self.semaphore.signal()
         }
         
         // Increase BPM
         else if letter == "B+" {
             print("B+")
+            self.semaphore.signal()
         }
         
         // Decrease BPM
         else if letter == "B-" {
             print("B-")
+            self.semaphore.signal()
         }
         
         // Increases octave
         else if letter == "O+" {
             print("O+")
+            self.semaphore.signal()
         }
             
         // Decreases octave
         else if letter == "O-" {
             print("O-")
+            self.semaphore.signal()
         }
             
         // Random note
         else if letter == "?" || letter == "." {
             print("? .")
+            self.semaphore.signal()
         }
         
         // Double volume
@@ -215,9 +248,11 @@ class TextReader {
             
             if notes.contains(lastRead) {
                 playNote(from: String(lastRead))
+                self.semaphore.signal()
             }
             else {
                 // silence
+                self.semaphore.signal()
             }
             print("OIU")
         }
