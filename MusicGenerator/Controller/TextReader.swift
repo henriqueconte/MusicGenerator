@@ -236,7 +236,9 @@ class TextReader {
             
         // Random note
         else if letter == "?" || letter == "." {
-            print("? .")
+            let randomNote = String(notes.randomElement() ?? "a")
+            playNote(from: randomNote)
+            
             self.semaphore.signal()
         }
         
