@@ -89,7 +89,8 @@ class TextReader {
         // If it is the first two or last two characters from the text
         else if charsArray.count == 2 {
             
-            if (charsArray[0] == "B" || charsArray[0] == "O") && (charsArray[1] == "+" || charsArray[1] == "-") {
+            if ((charsArray[0] == "B" || charsArray[0] == "O") && (charsArray[1] == "+" || charsArray[1] == "-")) ||
+            (charsArray[1] == "N" && charsArray[2] == "L" ) {
                 
                 var finalString: String = ""
                 finalString.append(charsArray[0])
@@ -115,7 +116,8 @@ class TextReader {
         // If it is any character between the two firsts and two lasts
         else if charsArray.count == 3 {
             
-            if (charsArray[1] == "B" || charsArray[1] == "O") && (charsArray[2] == "+" || charsArray[2] == "-") {
+            if ((charsArray[1] == "B" || charsArray[1] == "O") && (charsArray[2] == "+" || charsArray[2] == "-")) ||
+               (charsArray[1] == "N" && charsArray[2] == "L" ) {
                 
                 var finalString: String = ""
                 finalString.append(charsArray[1])
@@ -238,6 +240,13 @@ class TextReader {
         else if letter == "?" || letter == "." {
             let randomNote = String(notes.randomElement() ?? "a")
             playNote(from: randomNote)
+            
+            self.semaphore.signal()
+        }
+            
+        // Change instrument
+        else if letter == "NL" {
+            soundPlayer.toggleInstrument()
             
             self.semaphore.signal()
         }
