@@ -17,7 +17,7 @@ class SoundPlayer {
     private let pitchControl = AVAudioUnitTimePitch()
     private let audioPlayer = AVAudioPlayerNode()
     private var currentInstrument: Instruments = .guitar
-    private var volume: Float = 0.4
+    private var volume: Float = 0.1
     
     init() {
          // 1: connect the components to our playback engine
@@ -82,12 +82,8 @@ class SoundPlayer {
         }
     }
     
-    func decreaseVolume() {
-        volume = volume / 2
-        
-        if volume < 0.05 {
-            volume = 0.05
-        }
+    func resetVolume() {
+        volume = 0.1
     }
     
     

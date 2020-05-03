@@ -15,7 +15,7 @@ class TextReader {
     var stringCount: Int = 0
     var lastRead: Character = " "
     let soundPlayer = SoundPlayer()
-    let semaphore = DispatchSemaphore(value: 1)
+    let semaphore = DispatchSemaphore(value: 0)
     
     func read(_ currentString: String) {
         
@@ -23,11 +23,6 @@ class TextReader {
         stringCount = 0
         
         for i in 0..<currentString.count {
-            
-            // Finished reading
-            if i + stringCount + 1 > currentString.count {
-                break
-            }
 
             // Last character
             if i + stringCount + 1 == currentString.count {
@@ -37,7 +32,7 @@ class TextReader {
                 ]
                 
                 parseText(stringPart)
-            
+                resetPlayer()
                 break
             }
             
@@ -103,12 +98,16 @@ class TextReader {
                 stringCount += 1
                 
                 playNote(from: finalString)
+                
+                lastRead = charsArray[1]
             }
             else {
                 
                 let finalString = String(charsArray[0])
                 
                 playNote(from: finalString)
+                
+                lastRead = charsArray[0]
             }
             
         }
@@ -125,6 +124,8 @@ class TextReader {
                 stringCount += 1
                 
                 playNote(from: finalString)
+                
+                lastRead = charsArray[2]
             }
             
             else {
@@ -133,6 +134,8 @@ class TextReader {
                 lastRead = charsArray[0]
                 
                 playNote(from: finalString)
+                
+                lastRead = charsArray[1]
             }
         }
         
@@ -202,14 +205,8 @@ class TextReader {
         }
         
         // Half volume
-        else if letter == "-" {
-            soundPlayer.decreaseVolume()
-            self.semaphore.signal()
-        }
-            
-        else if letter == "—" {
-            soundPlayer.decreaseVolume()
-            soundPlayer.decreaseVolume()
+        else if letter == "-" || letter == "—" {
+            soundPlayer.resetVolume()
             self.semaphore.signal()
         }
         
@@ -248,11 +245,12 @@ class TextReader {
             
             if notes.contains(lastRead) {
                 playNote(from: String(lastRead))
-                self.semaphore.signal()
             }
             else {
                 // silence
-                self.semaphore.signal()
+                soundPlayer.silence {
+                    self.semaphore.signal()
+                }
             }
             print("OIU")
         }
@@ -261,6 +259,14 @@ class TextReader {
         else {
             print("none")
         }
+    }
+    
+    func resetPlayer() {
+        lastRead = Character(".")
+        stringCount = 0
+        soundPlayer.resetVolume()
+        
+        semaphore.wait()
     }
     
 }
