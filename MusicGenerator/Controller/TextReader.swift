@@ -14,6 +14,7 @@ class TextReader {
     var notes: [Character] = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g"]
     var stringCount: Int = 0
     var lastRead: Character = " "
+    var isLastCharacter: Bool = false
     let soundPlayer = SoundPlayer()
     let semaphore = DispatchSemaphore(value: 0)
     
@@ -32,7 +33,9 @@ class TextReader {
                 ]
                 
                 parseText(stringPart)
-                resetPlayer()
+                
+                isLastCharacter = true
+                
                 break
             }
             
@@ -226,13 +229,13 @@ class TextReader {
         
         // Increases octave
         else if letter == "O+" {
-            print("O+")
+            soundPlayer.increaseOctave()
             self.semaphore.signal()
         }
             
         // Decreases octave
         else if letter == "O-" {
-            print("O-")
+            soundPlayer.decreaseOctave()
             self.semaphore.signal()
         }
             
@@ -270,12 +273,18 @@ class TextReader {
         else {
             print("none")
         }
+        
+        if isLastCharacter {
+            resetPlayer()
+            isLastCharacter = false
+        }
     }
     
     func resetPlayer() {
         lastRead = Character(".")
         stringCount = 0
         soundPlayer.resetVolume()
+        soundPlayer.resetPitch()
         
         semaphore.wait()
     }

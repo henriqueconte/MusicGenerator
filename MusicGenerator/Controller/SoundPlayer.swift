@@ -82,9 +82,20 @@ class SoundPlayer {
         }
     }
     
+    func increaseOctave() {
+        pitchControl.pitch += 250
+    }
+    
+    func decreaseOctave() {
+        pitchControl.pitch -= 250
+    }
+    
     func resetVolume() {
         volume = 0.1
     }
     
+    func resetPitch() {
+        pitchControl.pitch = 0
+    }
     
 }
