@@ -90,12 +90,28 @@ class SoundPlayer {
         pitchControl.pitch -= 250
     }
     
+    func increaseBPM() {
+        pitchControl.rate += 0.5
+    }
+    
+    func decreaseBPM() {
+        pitchControl.rate -= 0.5
+        
+        if pitchControl.rate < 0.1 {
+            pitchControl.rate = 0.1
+        }
+    }
+    
     func resetVolume() {
         volume = 0.1
     }
     
     func resetPitch() {
         pitchControl.pitch = 0
+    }
+    
+    func resetBPM () {
+        pitchControl.rate = 1
     }
     
 }

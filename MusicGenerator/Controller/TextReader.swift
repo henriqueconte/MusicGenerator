@@ -217,13 +217,13 @@ class TextReader {
         
         // Increase BPM
         else if letter == "B+" {
-            print("B+")
+            soundPlayer.increaseBPM()
             self.semaphore.signal()
         }
         
         // Decrease BPM
         else if letter == "B-" {
-            print("B-")
+            soundPlayer.decreaseBPM()
             self.semaphore.signal()
         }
         
@@ -285,6 +285,7 @@ class TextReader {
         stringCount = 0
         soundPlayer.resetVolume()
         soundPlayer.resetPitch()
+        soundPlayer.resetBPM()
         
         semaphore.wait()
     }
