@@ -20,6 +20,8 @@ class MainScreenView: UIViewController {
     let textGenerator = TextGenerator()
     let textReader = TextReader()
     
+    var isReading: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         inputTextfield.delegate = self
@@ -33,9 +35,16 @@ class MainScreenView: UIViewController {
     }
     
     @IBAction func play(_ sender: Any) {
-        let currentText = inputTextfield.text
         
-        textReader.read(currentText ?? "")
+        if textReader.isReading == false {
+            let currentText = inputTextfield.text
+            
+            DispatchQueue.global(qos: .background).async {
+                self.textReader.read(currentText ?? "")
+            }
+        
+        }
+
     }
     
 

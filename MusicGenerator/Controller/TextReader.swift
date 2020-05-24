@@ -15,6 +15,7 @@ class TextReader {
     var stringCount: Int = 0
     var lastRead: Character = " "
     var isLastCharacter: Bool = false
+    var isReading: Bool = false
     let soundPlayer = SoundPlayer()
     let semaphore = DispatchSemaphore(value: 0)
     
@@ -22,6 +23,7 @@ class TextReader {
         
         let stringArray = Array(currentString)
         stringCount = 0
+        isReading = true
         
         for i in 0..<currentString.count {
 
@@ -32,9 +34,10 @@ class TextReader {
                     stringArray[currentString.count - 1]
                 ]
                 
+                isLastCharacter = true
+                
                 parseText(stringPart)
                 
-                isLastCharacter = true
                 
                 break
             }
@@ -283,6 +286,7 @@ class TextReader {
     func resetPlayer() {
         lastRead = Character(".")
         stringCount = 0
+        isReading = false
         soundPlayer.resetVolume()
         soundPlayer.resetPitch()
         soundPlayer.resetBPM()
