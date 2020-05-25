@@ -17,8 +17,8 @@ class MainScreenView: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var generateSongButton: UIButton!
     
-    let textGenerator = TextGenerator()
-    let textReader = TextReader()
+    let textGenerator: TextGenerator = TextGenerator()
+    var textReader: TextReader = TextReader()
     
     var isReading: Bool = false
     
@@ -36,18 +36,21 @@ class MainScreenView: UIViewController {
     
     @IBAction func play(_ sender: Any) {
         
+        textReader.allowPlaying()
+        
         if textReader.isReading == false {
             let currentText = inputTextfield.text
             
             DispatchQueue.global(qos: .background).async {
                 self.textReader.read(currentText ?? "")
             }
-        
         }
-
     }
     
-
+    @IBAction func stop(_ sender: Any) {
+        textReader.stopPlaying()
+    }
+    
 }
 
 extension MainScreenView: UITextFieldDelegate {

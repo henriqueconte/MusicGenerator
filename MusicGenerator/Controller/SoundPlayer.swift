@@ -18,6 +18,7 @@ class SoundPlayer {
     private let audioPlayer = AVAudioPlayerNode()
     private var currentInstrument: Instruments = .guitar
     private var volume: Float = 0.1
+    private var canPlay: Bool = true
     
     init() {
          // 1: connect the components to our playback engine
@@ -37,19 +38,24 @@ class SoundPlayer {
     
     func play(noteName: String, completion: @escaping () -> ()) {
         
-        let noteFileName = currentInstrument.rawValue + noteName
-        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteFileName, ofType: "m4a")!))
-        let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
+        if canPlay {
+            let noteFileName = currentInstrument.rawValue + noteName
+            let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteFileName, ofType: "m4a")!))
+            let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
 
-        audioPlayer.volume = volume
-        
-        audioPlayer.scheduleFile(audioFile!, at: nil)
-        audioPlayer.scheduleBuffer(buffer!) {
+            audioPlayer.volume = volume
+            
+            audioPlayer.scheduleFile(audioFile!, at: nil)
+            audioPlayer.scheduleBuffer(buffer!) {
+                completion()
+            }
+            
+            try? engine.start()
+            audioPlayer.play()
+        }
+        else {
             completion()
         }
-        
-        try? engine.start()
-        audioPlayer.play()
     }
     
     func silence(completion: @escaping () -> ()) {
@@ -112,6 +118,14 @@ class SoundPlayer {
     
     func resetBPM () {
         pitchControl.rate = 1
+    }
+    
+    func stopPlaying() {
+        canPlay = false
+    }
+    
+    func allowPlaying() {
+        canPlay = true
     }
     
 }

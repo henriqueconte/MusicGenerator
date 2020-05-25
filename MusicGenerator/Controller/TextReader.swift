@@ -294,4 +294,12 @@ class TextReader {
         semaphore.wait()
     }
     
+    func stopPlaying() {
+        soundPlayer.stopPlaying()
+    }
+    
+    func allowPlaying() {
+        soundPlayer.allowPlaying()
+    }
+    
 }
