@@ -17,7 +17,7 @@ class TextReader {
     var isLastCharacter: Bool = false
     var isReading: Bool = false
     let soundPlayer = SoundPlayer()
-    let semaphore = DispatchSemaphore(value: 0)
+    var semaphore = DispatchSemaphore(value: 0)
     
     func read(_ currentString: String) {
         
@@ -96,7 +96,7 @@ class TextReader {
         else if charsArray.count == 2 {
             
             if ((charsArray[0] == "B" || charsArray[0] == "O") && (charsArray[1] == "+" || charsArray[1] == "-")) ||
-            (charsArray[1] == "N" && charsArray[2] == "L" ) {
+            (charsArray[0] == "N" && charsArray[1] == "L" ) {
                 
                 var finalString: String = ""
                 finalString.append(charsArray[0])
@@ -150,6 +150,7 @@ class TextReader {
     }
     
     func playNote(from letter: String) {
+        print(letter)
         if letter == "A" || letter == "a" {
             //print("A")
             soundPlayer.play(noteName: "A", completion: {
@@ -262,6 +263,7 @@ class TextReader {
             
             if notes.contains(lastRead) {
                 playNote(from: String(lastRead))
+                self.semaphore.signal()
             }
             else {
                 // silence
@@ -269,12 +271,11 @@ class TextReader {
                     self.semaphore.signal()
                 }
             }
-            print("OIU")
+    
         }
-        
         // None of the above characters
         else {
-            print("none")
+            self.semaphore.signal()
         }
         
         if isLastCharacter {
@@ -284,21 +285,26 @@ class TextReader {
     }
     
     func resetPlayer() {
+        print("reset")
+        
         lastRead = Character(".")
         stringCount = 0
         isReading = false
+        
         soundPlayer.resetVolume()
         soundPlayer.resetPitch()
         soundPlayer.resetBPM()
         
-        semaphore.wait()
+        semaphore = DispatchSemaphore(value: 0)
     }
     
     func stopPlaying() {
+        print("stopped?")
         soundPlayer.stopPlaying()
     }
     
     func allowPlaying() {
+        print("allowed")
         soundPlayer.allowPlaying()
     }
     

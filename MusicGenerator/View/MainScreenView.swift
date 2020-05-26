@@ -37,6 +37,7 @@ class MainScreenView: UIViewController {
     @IBAction func play(_ sender: Any) {
         
         textReader.allowPlaying()
+        textReader.soundPlayer.resetVolume()
         
         if textReader.isReading == false {
             let currentText = inputTextfield.text

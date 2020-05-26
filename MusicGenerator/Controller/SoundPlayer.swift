@@ -39,6 +39,7 @@ class SoundPlayer {
     func play(noteName: String, completion: @escaping () -> ()) {
         
         if canPlay {
+            print("playing")
             let noteFileName = currentInstrument.rawValue + noteName
             let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteFileName, ofType: "m4a")!))
             let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
@@ -59,16 +60,24 @@ class SoundPlayer {
     }
     
     func silence(completion: @escaping () -> ()) {
-        let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "silenceNote", ofType: "mp3")!))
-        let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
         
-        audioPlayer.scheduleFile(audioFile!, at: nil)
-        audioPlayer.scheduleBuffer(buffer!, completionHandler: {
+        print("silence")
+        if canPlay {
+            let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "silenceNote", ofType: "mp3")!))
+            let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
+            
+            audioPlayer.scheduleFile(audioFile!, at: nil)
+            audioPlayer.scheduleBuffer(buffer!, completionHandler: {
+                completion()
+            })
+            
+            try? engine.start()
+            audioPlayer.play()
+        }
+        else {
             completion()
-        })
-        
-        try? engine.start()
-        audioPlayer.play()
+        }
+
     }
     
     func toggleInstrument() {
@@ -86,6 +95,10 @@ class SoundPlayer {
         if volume > 1 {
             volume = 1
         }
+    }
+    
+    func mute() {
+        volume = 0
     }
     
     func increaseOctave() {
@@ -121,6 +134,7 @@ class SoundPlayer {
     }
     
     func stopPlaying() {
+        audioPlayer.stop()
         canPlay = false
     }
     
