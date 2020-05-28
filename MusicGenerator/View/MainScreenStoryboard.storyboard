@@ -51,9 +51,19 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8fl-Zy-NQO" secondAttribute="height" multiplier="1:1" id="gRK-kC-SAZ"/>
                                 </constraints>
-                                <state key="normal" image="pauseIcon"/>
+                                <state key="normal" image="diceIcon"/>
                                 <connections>
                                     <action selector="generateButton:" destination="Zli-Eb-0Ag" eventType="touchUpInside" id="Qti-Wm-qAm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyG-w9-crE">
+                                <rect key="frame" x="1021" y="30" width="61" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oyG-w9-crE" secondAttribute="height" multiplier="1:1" id="Xmt-TF-J1I"/>
+                                </constraints>
+                                <state key="normal" image="questionIcon"/>
+                                <connections>
+                                    <action selector="showInstructionsScreen:" destination="Zli-Eb-0Ag" eventType="touchUpInside" id="jXT-MS-Uqf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,12 +72,15 @@
                             <constraint firstItem="9Ab-zB-dzV" firstAttribute="width" secondItem="rW7-Xp-Ykf" secondAttribute="width" id="420-9e-oa6"/>
                             <constraint firstItem="G2Y-AV-obj" firstAttribute="bottom" secondItem="mFW-7R-wRe" secondAttribute="bottom" id="4HZ-SN-z4N"/>
                             <constraint firstItem="AII-W0-x8z" firstAttribute="height" secondItem="YRB-en-EIi" secondAttribute="height" multiplier="0.2" id="6R5-Yc-T47"/>
+                            <constraint firstItem="oyG-w9-crE" firstAttribute="top" secondItem="G2Y-AV-obj" secondAttribute="top" constant="30" id="7mv-RF-yyg"/>
                             <constraint firstItem="8fl-Zy-NQO" firstAttribute="width" secondItem="rW7-Xp-Ykf" secondAttribute="width" id="9h5-bp-aPc"/>
                             <constraint firstItem="AII-W0-x8z" firstAttribute="centerX" secondItem="YRB-en-EIi" secondAttribute="centerX" id="9vb-tq-ndQ"/>
+                            <constraint firstItem="G2Y-AV-obj" firstAttribute="trailing" secondItem="oyG-w9-crE" secondAttribute="trailing" constant="30" id="HJ1-Uy-GxR"/>
                             <constraint firstItem="rW7-Xp-Ykf" firstAttribute="centerY" secondItem="AII-W0-x8z" secondAttribute="centerY" id="KBM-AE-GPh"/>
                             <constraint firstItem="MQX-CI-D9H" firstAttribute="centerY" secondItem="YRB-en-EIi" secondAttribute="centerY" multiplier="0.75" id="PQZ-Rz-hbM"/>
                             <constraint firstItem="AII-W0-x8z" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.8" id="RIM-3V-ngl"/>
                             <constraint firstItem="9Ab-zB-dzV" firstAttribute="leading" secondItem="rW7-Xp-Ykf" secondAttribute="trailing" constant="10" id="SE7-eh-vuE"/>
+                            <constraint firstItem="oyG-w9-crE" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.055" id="SNe-7R-KnS"/>
                             <constraint firstItem="rW7-Xp-Ykf" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.1" id="VWy-eX-OzJ"/>
                             <constraint firstItem="rW7-Xp-Ykf" firstAttribute="leading" secondItem="AII-W0-x8z" secondAttribute="leading" multiplier="1.3" id="gIh-G0-tZh"/>
                             <constraint firstItem="MQX-CI-D9H" firstAttribute="height" secondItem="YRB-en-EIi" secondAttribute="height" multiplier="0.07" id="hnm-T7-pfJ"/>
@@ -87,20 +100,34 @@
                         <outlet property="caseBackgroundImage" destination="AII-W0-x8z" id="5Cb-Wv-Mww"/>
                         <outlet property="generateSongButton" destination="8fl-Zy-NQO" id="hOY-bc-EsO"/>
                         <outlet property="inputTextfield" destination="MQX-CI-D9H" id="E0j-tM-BKr"/>
+                        <outlet property="instructionsButton" destination="oyG-w9-crE" id="KGz-zg-Adh"/>
                         <outlet property="playButton" destination="rW7-Xp-Ykf" id="ehE-uQ-NmG"/>
                         <outlet property="stopButton" destination="9Ab-zB-dzV" id="qCN-ex-4Ie"/>
+                        <segue destination="c9B-vv-scV" kind="showDetail" identifier="showInstructions" id="kOZ-Z3-fwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGu-3R-KSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4548.0215827338134" y="-3389.2086330935253"/>
         </scene>
+        <!--InstructionsScreenStoryboard-->
+        <scene sceneID="ihJ-J1-9xS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InstructionsScreenStoryboard" id="c9B-vv-scV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LYP-jg-YKt"/>
+                    <size key="freeformSize" width="1112" height="834"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5L-Tj-d4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4085" y="-3389"/>
+        </scene>
     </scenes>
     <resources>
         <image name="barBackground" width="2560" height="1600"/>
         <image name="caseBackground" width="2638" height="422"/>
-        <image name="pauseIcon" width="240" height="240"/>
+        <image name="diceIcon" width="240" height="240"/>
         <image name="playIcon" width="240" height="240"/>
+        <image name="questionIcon" width="240" height="240"/>
         <image name="stopIcon" width="240" height="240"/>
     </resources>
 </document>

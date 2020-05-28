@@ -16,6 +16,8 @@ class MainScreenView: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var generateSongButton: UIButton!
+    @IBOutlet weak var instructionsButton: UIButton!
+    
     
     let textGenerator: TextGenerator = TextGenerator()
     var textReader: TextReader = TextReader()
@@ -51,6 +53,11 @@ class MainScreenView: UIViewController {
     @IBAction func stop(_ sender: Any) {
         textReader.stopPlaying()
     }
+    
+    @IBAction func showInstructionsScreen(_ sender: Any) {
+        performSegue(withIdentifier: "showInstructions", sender: nil)
+    }
+    
     
 }
 
