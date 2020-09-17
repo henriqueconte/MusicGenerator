@@ -9,7 +9,7 @@
 import Foundation
 
 
-class TextReader {
+class TextReader {   // Responsável por ler uma string e interpretar quais ações serão tomadas
     
     var notes: [Character] = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g"]
     var stringCount: Int = 0
@@ -19,7 +19,7 @@ class TextReader {
     let soundPlayer = SoundPlayer()
     var semaphore = DispatchSemaphore(value: 0)
     
-    func read(_ currentString: String) {
+    func read(_ currentString: String) {    // Lê uma string e separa em conjuntos de dois e três caracteres
         
         let stringArray = Array(currentString)
         stringCount = 0
@@ -27,7 +27,7 @@ class TextReader {
         
         for i in 0..<currentString.count {
 
-            // Last character
+            // Último caracter
             if i + stringCount + 1 == currentString.count {
                 
                 let stringPart = [
@@ -42,7 +42,7 @@ class TextReader {
                 break
             }
             
-            // Last two characters
+            // Dois últimos caracteres
             if i + stringCount + 2 == currentString.count {
                 
                 let stringPart = [
@@ -54,7 +54,7 @@ class TextReader {
                 semaphore.wait()
             }
             
-            // First character
+            // Primeiro caracter
             else if i == 0 {
                 
                 let stringPart = [
@@ -66,7 +66,7 @@ class TextReader {
                 semaphore.wait()
             }
         
-            // Other options
+            // Outras opções
             else {
                 let stringPart = [
                     stringArray[i + stringCount - 1],
@@ -82,9 +82,9 @@ class TextReader {
         
     }
     
-    func parseText(_ charsArray: [Character]) {
+    func parseText(_ charsArray: [Character]) {    // Checa se o caracter é único (Exemplo: D) ou se é composto (Exemplo: B+) e formata para ser lido como um caracter único
         
-        // If it is the last character from the text
+        // Se é o último caracter do texto
         if charsArray.count == 1 {
             
             let finalString = String(charsArray[0])
@@ -92,7 +92,7 @@ class TextReader {
       
         }
         
-        // If it is the first two or last two characters from the text
+        // Se for os dois primeiros ou dois últimos caracteres do texto
         else if charsArray.count == 2 {
             
             if ((charsArray[0] == "B" || charsArray[0] == "O") && (charsArray[1] == "+" || charsArray[1] == "-")) ||
@@ -119,7 +119,7 @@ class TextReader {
             
         }
             
-        // If it is any character between the two firsts and two lasts
+        // Se não é nem os dois primeiros nem os dois últimos caracteres
         else if charsArray.count == 3 {
             
             if ((charsArray[1] == "B" || charsArray[1] == "O") && (charsArray[2] == "+" || charsArray[2] == "-")) ||
@@ -149,10 +149,10 @@ class TextReader {
         
     }
     
-    func playNote(from letter: String) {
+    func playNote(from letter: String) {   // Recebe um caracter e interage com o SoundPlayer para tocar uma nota ou modificar o som
+        
         print(letter)
         if letter == "A" || letter == "a" {
-            //print("A")
             soundPlayer.play(noteName: "A", completion: {
                 self.semaphore.signal()
             })
@@ -200,50 +200,50 @@ class TextReader {
             })
         }
         
-        // Silence
+        // Silencio
         else if letter == " " {
             soundPlayer.silence(completion: {
                 self.semaphore.signal()
             })
         }
         
-        // Double volume
+        // Dobra volume
         else if letter == "+" {
             soundPlayer.increaseVolume()
             self.semaphore.signal()
         }
         
-        // Half volume
+        // Reseta volume
         else if letter == "-" || letter == "—" {
             soundPlayer.resetVolume()
             self.semaphore.signal()
         }
         
-        // Increase BPM
+        // Aumenta BPM
         else if letter == "B+" {
             soundPlayer.increaseBPM()
             self.semaphore.signal()
         }
         
-        // Decrease BPM
+        // Diminui BPM
         else if letter == "B-" {
             soundPlayer.decreaseBPM()
             self.semaphore.signal()
         }
         
-        // Increases octave
+        // Aumenta oitava
         else if letter == "O+" {
             soundPlayer.increaseOctave()
             self.semaphore.signal()
         }
             
-        // Decreases octave
+        // Diminui oitava
         else if letter == "O-" {
             soundPlayer.decreaseOctave()
             self.semaphore.signal()
         }
             
-        // Random note
+        // Nota aleatória
         else if letter == "?" || letter == "." {
             let randomNote = String(notes.randomElement() ?? "a")
             playNote(from: randomNote)
@@ -251,14 +251,14 @@ class TextReader {
             self.semaphore.signal()
         }
             
-        // Change instrument
+        // Muda instrumento
         else if letter == "NL" {
             soundPlayer.toggleInstrument()
             
             self.semaphore.signal()
         }
         
-        // Double volume
+        // Toca ultima nota tocada
         else if letter == "O" || letter == "o" || letter == "I" || letter == "i" || letter == "U" || letter == "u" {
             
             if notes.contains(lastRead) {
@@ -273,7 +273,7 @@ class TextReader {
             }
     
         }
-        // None of the above characters
+        // Nenhum dos caracteres acima
         else {
             self.semaphore.signal()
         }
@@ -284,7 +284,7 @@ class TextReader {
         }
     }
     
-    func resetPlayer() {
+    func resetPlayer() {   // Reinicializa o leitor e as configurações de som do SoundPlayer
         print("reset")
         
         lastRead = Character(".")
@@ -298,12 +298,12 @@ class TextReader {
         semaphore = DispatchSemaphore(value: 0)
     }
     
-    func stopPlaying() {
+    func stopPlaying() {    // Comunica com o soundPlayer para proibir ele de tocar sons
         print("stopped?")
         soundPlayer.stopPlaying()
     }
     
-    func allowPlaying() {
+    func allowPlaying() {    // Comunica com o soundPlayer para permitir ele de tocar sons
         print("allowed")
         soundPlayer.allowPlaying()
     }

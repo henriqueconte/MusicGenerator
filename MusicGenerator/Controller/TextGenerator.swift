@@ -9,12 +9,13 @@
 import Foundation
 
 
-class TextGenerator {
+class TextGenerator { // Responsável pela criação de textos
     
-    func generateText() -> String {
+    private let letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-?.\\ "
+    
+    func generateText() -> String { // Gera um texto conforme um conjunto de caracteres existentes
         
         var finalText: String = ""
-        let letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-?.\\ "
         
         finalText = String((0..<100).map({ _ in
             (letters.randomElement()!)

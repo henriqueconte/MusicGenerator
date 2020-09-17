@@ -27,7 +27,6 @@ class MainScreenView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         inputTextfield.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func generateButton(_ sender: Any) {

@@ -21,12 +21,12 @@ class SoundPlayer {
     private var canPlay: Bool = true
     
     init() {
-         // 1: connect the components to our playback engine
+         // 1: conecta os componentes na nossa engine de som
         engine.attach(audioPlayer)
         engine.attach(pitchControl)
         engine.attach(speedControl)
         
-        // 2: arrange the parts so that output from one is input to another
+        // 2: conecta as partes entre si para o output se uma ser o input da outra
         engine.connect(audioPlayer, to: speedControl, format: nil)
         engine.connect(speedControl, to: pitchControl, format: nil)
         engine.connect(pitchControl, to: engine.mainMixerNode, format: nil)
