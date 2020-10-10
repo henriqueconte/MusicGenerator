@@ -14,6 +14,7 @@
 		804300BE244609E00040E719 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804300BD244609E00040E719 /* SceneDelegate.swift */; };
 		804300C0244609F00040E719 /* MainScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */; };
 		804300C2244609F50040E719 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804300C1244609F50040E719 /* MainScreenView.swift */; };
+		804DB2442532135C00EEFA33 /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804DB2432532135C00EEFA33 /* FileController.swift */; };
 		805CF1E5245134490099703D /* pianoD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1D8245134480099703D /* pianoD.m4a */; };
 		805CF1E8245134490099703D /* pianoC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DB245134480099703D /* pianoC.m4a */; };
 		805CF1E9245134490099703D /* pianoA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DC245134480099703D /* pianoA.m4a */; };
@@ -46,6 +47,7 @@
 		804300BD244609E00040E719 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = Support/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainScreenStoryboard.storyboard; path = View/MainScreenStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		804300C1244609F50040E719 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreenView.swift; path = View/MainScreenView.swift; sourceTree = SOURCE_ROOT; };
+		804DB2432532135C00EEFA33 /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileController.swift; path = Controller/FileController.swift; sourceTree = SOURCE_ROOT; };
 		805CF1D8245134480099703D /* pianoD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoD.m4a; path = Normal/pianoD.m4a; sourceTree = "<group>"; };
 		805CF1DB245134480099703D /* pianoC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoC.m4a; path = Normal/pianoC.m4a; sourceTree = "<group>"; };
 		805CF1DC245134480099703D /* pianoA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoA.m4a; path = Normal/pianoA.m4a; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				8090F5F2244DEFC900E00E80 /* TextGenerator.swift */,
 				8090F5F4244F4A3200E00E80 /* TextReader.swift */,
 				8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */,
+				804DB2432532135C00EEFA33 /* FileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				80EA24C824460E8C00F04808 /* InstructionsView.swift in Sources */,
 				8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */,
 				8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */,
+				804DB2442532135C00EEFA33 /* FileController.swift in Sources */,
 				804300C2244609F50040E719 /* MainScreenView.swift in Sources */,
 				804300BE244609E00040E719 /* SceneDelegate.swift in Sources */,
 			);
