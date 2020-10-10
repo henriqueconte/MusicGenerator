@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,21 +69,34 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkE-ZV-6nO">
-                                <rect key="frame" x="40" y="40" width="40" height="45"/>
+                                <rect key="frame" x="110" y="37.5" width="40" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ics-e9-lsP"/>
                                     <constraint firstAttribute="height" constant="45" id="lm7-yA-Mz0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
+                                <state key="normal" image="square.and.arrow.down.fill" catalog="system">
                                     <color key="titleColor" systemColor="systemGray5Color"/>
                                     <color key="titleShadowColor" systemColor="systemGroupedBackgroundColor"/>
-                                    <imageReference key="image" image="square.and.arrow.down.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <connections>
                                     <action selector="save:" destination="Zli-Eb-0Ag" eventType="touchUpInside" id="1oy-ju-mgX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k92-QL-edO">
+                                <rect key="frame" x="40" y="40" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EHh-P8-Ldj"/>
+                                    <constraint firstAttribute="width" constant="40" id="p7b-hZ-xJZ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="folder.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </state>
+                                <connections>
+                                    <action selector="openFile:" destination="Zli-Eb-0Ag" eventType="touchUpInside" id="B1u-Hz-WmM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,6 +107,7 @@
                             <constraint firstItem="G2Y-AV-obj" firstAttribute="bottom" secondItem="mFW-7R-wRe" secondAttribute="bottom" id="4HZ-SN-z4N"/>
                             <constraint firstItem="AII-W0-x8z" firstAttribute="height" secondItem="YRB-en-EIi" secondAttribute="height" multiplier="0.2" id="6R5-Yc-T47"/>
                             <constraint firstItem="oyG-w9-crE" firstAttribute="top" secondItem="G2Y-AV-obj" secondAttribute="top" constant="30" id="7mv-RF-yyg"/>
+                            <constraint firstItem="OkE-ZV-6nO" firstAttribute="centerY" secondItem="k92-QL-edO" secondAttribute="centerY" id="9WO-cI-71h"/>
                             <constraint firstItem="8fl-Zy-NQO" firstAttribute="width" secondItem="rW7-Xp-Ykf" secondAttribute="width" id="9h5-bp-aPc"/>
                             <constraint firstItem="AII-W0-x8z" firstAttribute="centerX" secondItem="YRB-en-EIi" secondAttribute="centerX" id="9vb-tq-ndQ"/>
                             <constraint firstItem="G2Y-AV-obj" firstAttribute="trailing" secondItem="oyG-w9-crE" secondAttribute="trailing" constant="30" id="HJ1-Uy-GxR"/>
@@ -104,13 +117,14 @@
                             <constraint firstItem="9Ab-zB-dzV" firstAttribute="leading" secondItem="rW7-Xp-Ykf" secondAttribute="trailing" constant="10" id="SE7-eh-vuE"/>
                             <constraint firstItem="oyG-w9-crE" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.055" id="SNe-7R-KnS"/>
                             <constraint firstItem="rW7-Xp-Ykf" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.1" id="VWy-eX-OzJ"/>
+                            <constraint firstItem="k92-QL-edO" firstAttribute="top" secondItem="G2Y-AV-obj" secondAttribute="top" constant="40" id="brW-c9-ynB"/>
+                            <constraint firstItem="OkE-ZV-6nO" firstAttribute="leading" secondItem="k92-QL-edO" secondAttribute="trailing" constant="30" id="fTT-bB-izU"/>
                             <constraint firstItem="rW7-Xp-Ykf" firstAttribute="leading" secondItem="AII-W0-x8z" secondAttribute="leading" multiplier="1.3" id="gIh-G0-tZh"/>
                             <constraint firstItem="MQX-CI-D9H" firstAttribute="height" secondItem="YRB-en-EIi" secondAttribute="height" multiplier="0.07" id="hnm-T7-pfJ"/>
                             <constraint firstItem="MQX-CI-D9H" firstAttribute="centerX" secondItem="YRB-en-EIi" secondAttribute="centerX" id="kHi-dq-7PT"/>
-                            <constraint firstItem="OkE-ZV-6nO" firstAttribute="top" secondItem="G2Y-AV-obj" secondAttribute="top" constant="40" id="mdj-OC-z97"/>
-                            <constraint firstItem="OkE-ZV-6nO" firstAttribute="leading" secondItem="G2Y-AV-obj" secondAttribute="leading" constant="40" id="myp-Fr-1Jy"/>
                             <constraint firstItem="G2Y-AV-obj" firstAttribute="bottom" secondItem="AII-W0-x8z" secondAttribute="bottom" id="oUK-49-YB5"/>
                             <constraint firstItem="MQX-CI-D9H" firstAttribute="width" secondItem="YRB-en-EIi" secondAttribute="width" multiplier="0.8" id="qsU-FA-2Rz"/>
+                            <constraint firstItem="k92-QL-edO" firstAttribute="leading" secondItem="G2Y-AV-obj" secondAttribute="leading" constant="40" id="t2Y-HQ-w5O"/>
                             <constraint firstItem="mFW-7R-wRe" firstAttribute="top" secondItem="G2Y-AV-obj" secondAttribute="top" id="tKU-Ha-HB6"/>
                             <constraint firstItem="mFW-7R-wRe" firstAttribute="leading" secondItem="G2Y-AV-obj" secondAttribute="leading" id="u79-KB-IiU"/>
                             <constraint firstItem="G2Y-AV-obj" firstAttribute="trailing" secondItem="mFW-7R-wRe" secondAttribute="trailing" id="udZ-fp-XfR"/>
@@ -124,6 +138,7 @@
                         <outlet property="generateSongButton" destination="8fl-Zy-NQO" id="hOY-bc-EsO"/>
                         <outlet property="inputTextfield" destination="MQX-CI-D9H" id="E0j-tM-BKr"/>
                         <outlet property="instructionsButton" destination="oyG-w9-crE" id="KGz-zg-Adh"/>
+                        <outlet property="openFileButton" destination="k92-QL-edO" id="xfo-8O-RjV"/>
                         <outlet property="playButton" destination="rW7-Xp-Ykf" id="ehE-uQ-NmG"/>
                         <outlet property="saveButton" destination="OkE-ZV-6nO" id="c9o-0s-T6A"/>
                         <outlet property="stopButton" destination="9Ab-zB-dzV" id="qCN-ex-4Ie"/>
@@ -150,6 +165,7 @@
         <image name="barBackground" width="2560" height="1600"/>
         <image name="caseBackground" width="2638" height="422"/>
         <image name="diceIcon" width="240" height="240"/>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
         <image name="playIcon" width="240" height="240"/>
         <image name="questionIcon" width="240" height="240"/>
         <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>

@@ -11,24 +11,24 @@ import Foundation
 
 final class FileController {
     
-    func readFile(fileName: String) -> String {
+    func readFile(fileName: String, completion: @escaping (Bool, String) -> ()) {
         
-        guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return "failed finding directory" }
+        guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            completion(false, "")
+            return
+        }
     
         let fileURL = directory.appendingPathComponent(fileName)
             
         do {
             let fileContent = try String(contentsOf: fileURL, encoding: .utf8)
-            
-            return fileContent
+            completion(true, fileContent)
         } catch {
-            //TODO: PRESENT ALERT
-            print("error reading file")
-            return "failed reading file"
+            completion(false, "Error reading file!")
         }
     }
     
-    func writeFile(fileName: String, fileContent: String) {
+    func writeFile(fileName: String, fileContent: String, completion: @escaping (Bool) -> ()) {
         
         guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
         
@@ -36,8 +36,24 @@ final class FileController {
         
         do {
             try fileContent.write(to: fileURL, atomically: true, encoding: .utf8)
+            completion(true)
         } catch {
-            print ("error writing file")
+            completion(false)
         }
+    }
+    
+    func getListOfFiles(completion: @escaping (Bool, [String]) -> ()) {
+        
+        guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+       
+        do {
+            let fileURLList: [URL] = try FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil)
+            let fileNames = fileURLList.map { $0.deletingPathExtension().lastPathComponent }
+            
+            completion(true, fileNames)
+        } catch {
+            completion(false, [])
+        }
+        
     }
 }

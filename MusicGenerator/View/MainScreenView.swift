@@ -18,6 +18,7 @@ class MainScreenView: UIViewController {
     @IBOutlet weak var generateSongButton: UIButton!
     @IBOutlet weak var instructionsButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var openFileButton: UIButton!
     
     let textGenerator: TextGenerator = TextGenerator()
     var textReader: TextReader = TextReader()
@@ -59,10 +60,43 @@ class MainScreenView: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
-        presentAlertWithInput(title: "Salvar", message: "Insira o nome do arquivo") { (inputedFileName) in
-            print(inputedFileName)
+        presentAlertWithInput(title: "Salvar", message: "Insira o nome do arquivo") { [weak self] (inputFileName) in
+            guard let self = self else { return }
+        
+            let textContent: String = self.inputTextfield.text ?? ""
+            
+            self.fileController.writeFile(fileName: inputFileName, fileContent: textContent, completion: { (hasSucceeded) in
+                if !hasSucceeded {
+                    self.presentAlert(title: "Erro", message: "Erro ao salvar arquivo!")
+                }
+            })
         }
     }
+    
+    @IBAction func openFile(_ sender: Any) {
+        fileController.getListOfFiles { [weak self ](hasSucceeded, filesName) in
+            guard let self = self else { return }
+            
+            if hasSucceeded {
+                self.presentAlertWithListOfFiles(fileNameList: filesName) { (selectedFileName) in
+                    
+                    self.fileController.readFile(fileName: selectedFileName) { (isAvailable, fileContent) in
+                        
+                        if isAvailable {
+                            self.inputTextfield.text = fileContent
+                        }
+                        else {
+                            self.presentAlert(title: "Erro", message: "Erro ao carregar arquivo!")
+                        }
+                    }
+                }
+            }
+            else {
+                self.presentAlert(title: "Erro", message: "Erro ao buscar arquivos!")
+            }
+        }
+    }
+    
     
 }
 
