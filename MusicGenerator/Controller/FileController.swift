@@ -39,6 +39,5 @@ final class FileController {
         } catch {
             print ("error writing file")
         }
-        
     }
 }

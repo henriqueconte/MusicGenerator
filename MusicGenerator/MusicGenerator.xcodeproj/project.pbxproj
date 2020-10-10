@@ -33,6 +33,7 @@
 		8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F2244DEFC900E00E80 /* TextGenerator.swift */; };
 		8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F4244F4A3200E00E80 /* TextReader.swift */; };
 		8090F5F7244F4C2000E00E80 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */; };
+		80B805A9253271140039DD3E /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B805A8253271140039DD3E /* Alerts.swift */; };
 		80BB97AF245B2681003F4C17 /* silenceNote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80BB97AE245B2681003F4C17 /* silenceNote.mp3 */; };
 		80EA24C624460E7100F04808 /* InstructionsScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EA24C524460E7100F04808 /* InstructionsScreenStoryboard.storyboard */; };
 		80EA24C824460E8C00F04808 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA24C724460E8C00F04808 /* InstructionsView.swift */; };
@@ -66,6 +67,7 @@
 		8090F5F2244DEFC900E00E80 /* TextGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextGenerator.swift; path = Controller/TextGenerator.swift; sourceTree = SOURCE_ROOT; };
 		8090F5F4244F4A3200E00E80 /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextReader.swift; path = Controller/TextReader.swift; sourceTree = SOURCE_ROOT; };
 		8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Controller/SoundPlayer.swift; sourceTree = SOURCE_ROOT; };
+		80B805A8253271140039DD3E /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		80BB97AE245B2681003F4C17 /* silenceNote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silenceNote.mp3; sourceTree = "<group>"; };
 		80EA24C524460E7100F04808 /* InstructionsScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructionsScreenStoryboard.storyboard; sourceTree = "<group>"; };
 		80EA24C724460E8C00F04808 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				804300B9244609D60040E719 /* AppDelegate.swift */,
 				804300BB244609DC0040E719 /* Assets.xcassets */,
 				804300BD244609E00040E719 /* SceneDelegate.swift */,
+				80B805A8253271140039DD3E /* Alerts.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				80EA24C824460E8C00F04808 /* InstructionsView.swift in Sources */,
 				8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */,
 				8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */,
+				80B805A9253271140039DD3E /* Alerts.swift in Sources */,
 				804DB2442532135C00EEFA33 /* FileController.swift in Sources */,
 				804300C2244609F50040E719 /* MainScreenView.swift in Sources */,
 				804300BE244609E00040E719 /* SceneDelegate.swift in Sources */,

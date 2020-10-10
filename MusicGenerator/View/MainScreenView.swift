@@ -17,7 +17,7 @@ class MainScreenView: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var generateSongButton: UIButton!
     @IBOutlet weak var instructionsButton: UIButton!
-    
+    @IBOutlet weak var saveButton: UIButton!
     
     let textGenerator: TextGenerator = TextGenerator()
     var textReader: TextReader = TextReader()
@@ -43,7 +43,6 @@ class MainScreenView: UIViewController {
         
         if textReader.isReading == false {
             let currentText = inputTextfield.text
-            fileController.writeFile(fileName: "eugostodebatata.txt", fileContent: currentText ?? "input text field")
             
             DispatchQueue.global(qos: .background).async {
                 self.textReader.read(currentText ?? "")
@@ -52,7 +51,6 @@ class MainScreenView: UIViewController {
     }
     
     @IBAction func stop(_ sender: Any) {
-        print(fileController.readFile(fileName: "eugostodebatata.txt"))
         textReader.stopPlaying()
     }
     
@@ -60,6 +58,11 @@ class MainScreenView: UIViewController {
         performSegue(withIdentifier: "showInstructions", sender: nil)
     }
     
+    @IBAction func save(_ sender: Any) {
+        presentAlertWithInput(title: "Salvar", message: "Insira o nome do arquivo") { (inputedFileName) in
+            print(inputedFileName)
+        }
+    }
     
 }
 
