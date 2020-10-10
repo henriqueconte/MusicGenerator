@@ -9,7 +9,7 @@
 import Foundation
 
 
-class TextGenerator { // Responsável pela criação de textos
+final class TextGenerator { // Responsável pela criação de textos
     
     private let letters: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+-?.\\ "
     

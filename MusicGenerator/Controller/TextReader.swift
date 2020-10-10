@@ -11,13 +11,17 @@ import Foundation
 
 class TextReader {   // Responsável por ler uma string e interpretar quais ações serão tomadas
     
-    var notes: [Character] = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g"]
-    var stringCount: Int = 0
-    var lastRead: Character = " "
-    var isLastCharacter: Bool = false
-    var isReading: Bool = false
-    let soundPlayer = SoundPlayer()
-    var semaphore = DispatchSemaphore(value: 0)
+    public let soundPlayer = SoundPlayer()
+    private(set) var isReading: Bool = false
+    private var lastRead: Character = " "
+    
+    private var notes: [Character] = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g"]
+    private var stringCount: Int = 0
+    
+    private var isLastCharacter: Bool = false
+    
+    
+    private var semaphore = DispatchSemaphore(value: 0)
     
     func read(_ currentString: String) {    // Lê uma string e separa em conjuntos de dois e três caracteres
         
@@ -151,7 +155,6 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
     
     func playNote(from letter: String) {   // Recebe um caracter e interage com o SoundPlayer para tocar uma nota ou modificar o som
         
-        print(letter)
         if letter == "A" || letter == "a" {
             soundPlayer.play(noteName: "A", completion: {
                 self.semaphore.signal()
