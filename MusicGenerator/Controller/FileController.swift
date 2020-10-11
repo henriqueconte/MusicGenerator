@@ -18,7 +18,7 @@ final class FileController {
             return
         }
     
-        let fileURL = directory.appendingPathComponent(fileName)
+        let fileURL = directory.appendingPathComponent(fileName).appendingPathExtension("txt")
             
         do {
             let fileContent = try String(contentsOf: fileURL, encoding: .utf8)
@@ -32,7 +32,7 @@ final class FileController {
         
         guard let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
         
-        let fileURL = directory.appendingPathComponent(fileName)
+        let fileURL = directory.appendingPathComponent(fileName).appendingPathExtension("txt")
         
         do {
             try fileContent.write(to: fileURL, atomically: true, encoding: .utf8)
