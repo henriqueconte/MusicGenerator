@@ -15,6 +15,34 @@
 		804300C0244609F00040E719 /* MainScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */; };
 		804300C2244609F50040E719 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804300C1244609F50040E719 /* MainScreenView.swift */; };
 		804DB2442532135C00EEFA33 /* FileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804DB2432532135C00EEFA33 /* FileController.swift */; };
+		80532F882542763C0012EA07 /* trumpetE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F512542763B0012EA07 /* trumpetE.m4a */; };
+		80532F892542763C0012EA07 /* trumpetD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F522542763B0012EA07 /* trumpetD.m4a */; };
+		80532F8A2542763C0012EA07 /* trumpetF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F532542763B0012EA07 /* trumpetF.m4a */; };
+		80532F8B2542763C0012EA07 /* trumpetG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F542542763B0012EA07 /* trumpetG.m4a */; };
+		80532F8D2542763C0012EA07 /* trumpetC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F562542763B0012EA07 /* trumpetC.m4a */; };
+		80532F8E2542763C0012EA07 /* trumpetB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F572542763B0012EA07 /* trumpetB.m4a */; };
+		80532F8F2542763C0012EA07 /* trumpetA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F582542763B0012EA07 /* trumpetA.m4a */; };
+		80532F932542763C0012EA07 /* saxophoneC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F5D2542763B0012EA07 /* saxophoneC.m4a */; };
+		80532F942542763C0012EA07 /* saxophoneB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F5E2542763B0012EA07 /* saxophoneB.m4a */; };
+		80532F962542763C0012EA07 /* saxophoneA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F602542763B0012EA07 /* saxophoneA.m4a */; };
+		80532F972542763C0012EA07 /* saxophoneE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F612542763B0012EA07 /* saxophoneE.m4a */; };
+		80532F982542763C0012EA07 /* saxophoneD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F622542763B0012EA07 /* saxophoneD.m4a */; };
+		80532F992542763C0012EA07 /* saxophoneF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F632542763B0012EA07 /* saxophoneF.m4a */; };
+		80532F9A2542763C0012EA07 /* saxophoneG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F642542763B0012EA07 /* saxophoneG.m4a */; };
+		80532FA42542763C0012EA07 /* harpA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F6F2542763C0012EA07 /* harpA.m4a */; };
+		80532FA62542763C0012EA07 /* harpC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F712542763C0012EA07 /* harpC.m4a */; };
+		80532FA72542763C0012EA07 /* harpB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F722542763C0012EA07 /* harpB.m4a */; };
+		80532FA82542763C0012EA07 /* harpF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F732542763C0012EA07 /* harpF.m4a */; };
+		80532FA92542763C0012EA07 /* harpG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F742542763C0012EA07 /* harpG.m4a */; };
+		80532FAB2542763C0012EA07 /* harpE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F762542763C0012EA07 /* harpE.m4a */; };
+		80532FAC2542763C0012EA07 /* harpD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F772542763C0012EA07 /* harpD.m4a */; };
+		80532FAD2542763C0012EA07 /* glockenspielB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F792542763C0012EA07 /* glockenspielB.m4a */; };
+		80532FAE2542763C0012EA07 /* glockenspielC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F7A2542763C0012EA07 /* glockenspielC.m4a */; };
+		80532FB02542763C0012EA07 /* glockenspielA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F7C2542763C0012EA07 /* glockenspielA.m4a */; };
+		80532FB12542763C0012EA07 /* glockenspielD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F7D2542763C0012EA07 /* glockenspielD.m4a */; };
+		80532FB22542763C0012EA07 /* glockenspielE.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F7E2542763C0012EA07 /* glockenspielE.m4a */; };
+		80532FB32542763C0012EA07 /* glockenspielG.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F7F2542763C0012EA07 /* glockenspielG.m4a */; };
+		80532FB42542763C0012EA07 /* glockenspielF.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 80532F802542763C0012EA07 /* glockenspielF.m4a */; };
 		805CF1E5245134490099703D /* pianoD.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1D8245134480099703D /* pianoD.m4a */; };
 		805CF1E8245134490099703D /* pianoC.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DB245134480099703D /* pianoC.m4a */; };
 		805CF1E9245134490099703D /* pianoA.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 805CF1DC245134480099703D /* pianoA.m4a */; };
@@ -49,6 +77,34 @@
 		804300BF244609EF0040E719 /* MainScreenStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainScreenStoryboard.storyboard; path = View/MainScreenStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		804300C1244609F50040E719 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreenView.swift; path = View/MainScreenView.swift; sourceTree = SOURCE_ROOT; };
 		804DB2432532135C00EEFA33 /* FileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileController.swift; path = Controller/FileController.swift; sourceTree = SOURCE_ROOT; };
+		80532F512542763B0012EA07 /* trumpetE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetE.m4a; sourceTree = "<group>"; };
+		80532F522542763B0012EA07 /* trumpetD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetD.m4a; sourceTree = "<group>"; };
+		80532F532542763B0012EA07 /* trumpetF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetF.m4a; sourceTree = "<group>"; };
+		80532F542542763B0012EA07 /* trumpetG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetG.m4a; sourceTree = "<group>"; };
+		80532F562542763B0012EA07 /* trumpetC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetC.m4a; sourceTree = "<group>"; };
+		80532F572542763B0012EA07 /* trumpetB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetB.m4a; sourceTree = "<group>"; };
+		80532F582542763B0012EA07 /* trumpetA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = trumpetA.m4a; sourceTree = "<group>"; };
+		80532F5D2542763B0012EA07 /* saxophoneC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneC.m4a; sourceTree = "<group>"; };
+		80532F5E2542763B0012EA07 /* saxophoneB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneB.m4a; sourceTree = "<group>"; };
+		80532F602542763B0012EA07 /* saxophoneA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneA.m4a; sourceTree = "<group>"; };
+		80532F612542763B0012EA07 /* saxophoneE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneE.m4a; sourceTree = "<group>"; };
+		80532F622542763B0012EA07 /* saxophoneD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneD.m4a; sourceTree = "<group>"; };
+		80532F632542763B0012EA07 /* saxophoneF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneF.m4a; sourceTree = "<group>"; };
+		80532F642542763B0012EA07 /* saxophoneG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = saxophoneG.m4a; sourceTree = "<group>"; };
+		80532F6F2542763C0012EA07 /* harpA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpA.m4a; sourceTree = "<group>"; };
+		80532F712542763C0012EA07 /* harpC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpC.m4a; sourceTree = "<group>"; };
+		80532F722542763C0012EA07 /* harpB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpB.m4a; sourceTree = "<group>"; };
+		80532F732542763C0012EA07 /* harpF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpF.m4a; sourceTree = "<group>"; };
+		80532F742542763C0012EA07 /* harpG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpG.m4a; sourceTree = "<group>"; };
+		80532F762542763C0012EA07 /* harpE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpE.m4a; sourceTree = "<group>"; };
+		80532F772542763C0012EA07 /* harpD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = harpD.m4a; sourceTree = "<group>"; };
+		80532F792542763C0012EA07 /* glockenspielB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielB.m4a; sourceTree = "<group>"; };
+		80532F7A2542763C0012EA07 /* glockenspielC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielC.m4a; sourceTree = "<group>"; };
+		80532F7C2542763C0012EA07 /* glockenspielA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielA.m4a; sourceTree = "<group>"; };
+		80532F7D2542763C0012EA07 /* glockenspielD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielD.m4a; sourceTree = "<group>"; };
+		80532F7E2542763C0012EA07 /* glockenspielE.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielE.m4a; sourceTree = "<group>"; };
+		80532F7F2542763C0012EA07 /* glockenspielG.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielG.m4a; sourceTree = "<group>"; };
+		80532F802542763C0012EA07 /* glockenspielF.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glockenspielF.m4a; sourceTree = "<group>"; };
 		805CF1D8245134480099703D /* pianoD.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoD.m4a; path = Normal/pianoD.m4a; sourceTree = "<group>"; };
 		805CF1DB245134480099703D /* pianoC.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoC.m4a; path = Normal/pianoC.m4a; sourceTree = "<group>"; };
 		805CF1DC245134480099703D /* pianoA.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = pianoA.m4a; path = Normal/pianoA.m4a; sourceTree = "<group>"; };
@@ -119,9 +175,69 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		80532F4E2542763B0012EA07 /* Trumpet */ = {
+			isa = PBXGroup;
+			children = (
+				80532F512542763B0012EA07 /* trumpetE.m4a */,
+				80532F522542763B0012EA07 /* trumpetD.m4a */,
+				80532F532542763B0012EA07 /* trumpetF.m4a */,
+				80532F542542763B0012EA07 /* trumpetG.m4a */,
+				80532F562542763B0012EA07 /* trumpetC.m4a */,
+				80532F572542763B0012EA07 /* trumpetB.m4a */,
+				80532F582542763B0012EA07 /* trumpetA.m4a */,
+			);
+			path = Trumpet;
+			sourceTree = "<group>";
+		};
+		80532F5C2542763B0012EA07 /* Saxophone */ = {
+			isa = PBXGroup;
+			children = (
+				80532F5D2542763B0012EA07 /* saxophoneC.m4a */,
+				80532F5E2542763B0012EA07 /* saxophoneB.m4a */,
+				80532F602542763B0012EA07 /* saxophoneA.m4a */,
+				80532F612542763B0012EA07 /* saxophoneE.m4a */,
+				80532F622542763B0012EA07 /* saxophoneD.m4a */,
+				80532F632542763B0012EA07 /* saxophoneF.m4a */,
+				80532F642542763B0012EA07 /* saxophoneG.m4a */,
+			);
+			path = Saxophone;
+			sourceTree = "<group>";
+		};
+		80532F6A2542763B0012EA07 /* Harp */ = {
+			isa = PBXGroup;
+			children = (
+				80532F6F2542763C0012EA07 /* harpA.m4a */,
+				80532F712542763C0012EA07 /* harpC.m4a */,
+				80532F722542763C0012EA07 /* harpB.m4a */,
+				80532F732542763C0012EA07 /* harpF.m4a */,
+				80532F742542763C0012EA07 /* harpG.m4a */,
+				80532F762542763C0012EA07 /* harpE.m4a */,
+				80532F772542763C0012EA07 /* harpD.m4a */,
+			);
+			path = Harp;
+			sourceTree = "<group>";
+		};
+		80532F782542763C0012EA07 /* Glockenspiel */ = {
+			isa = PBXGroup;
+			children = (
+				80532F792542763C0012EA07 /* glockenspielB.m4a */,
+				80532F7A2542763C0012EA07 /* glockenspielC.m4a */,
+				80532F7C2542763C0012EA07 /* glockenspielA.m4a */,
+				80532F7D2542763C0012EA07 /* glockenspielD.m4a */,
+				80532F7E2542763C0012EA07 /* glockenspielE.m4a */,
+				80532F7F2542763C0012EA07 /* glockenspielG.m4a */,
+				80532F802542763C0012EA07 /* glockenspielF.m4a */,
+			);
+			path = Glockenspiel;
+			sourceTree = "<group>";
+		};
 		805CF19B245132E70099703D /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				80532F782542763C0012EA07 /* Glockenspiel */,
+				80532F6A2542763B0012EA07 /* Harp */,
+				80532F5C2542763B0012EA07 /* Saxophone */,
+				80532F4E2542763B0012EA07 /* Trumpet */,
 				80BB97B0245B3202003F4C17 /* Others */,
 				805CF19D245132F80099703D /* Guitar */,
 				805CF19C245132F00099703D /* Piano */,
@@ -265,23 +381,51 @@
 				805CF205245134860099703D /* guitarD.m4a in Resources */,
 				805CF1EC245134490099703D /* pianoG.m4a in Resources */,
 				805CF1E9245134490099703D /* pianoA.m4a in Resources */,
+				80532FB12542763C0012EA07 /* glockenspielD.m4a in Resources */,
+				80532F8E2542763C0012EA07 /* trumpetB.m4a in Resources */,
 				804300C0244609F00040E719 /* MainScreenStoryboard.storyboard in Resources */,
+				80532F932542763C0012EA07 /* saxophoneC.m4a in Resources */,
+				80532FAE2542763C0012EA07 /* glockenspielC.m4a in Resources */,
+				80532F882542763C0012EA07 /* trumpetE.m4a in Resources */,
+				80532F992542763C0012EA07 /* saxophoneF.m4a in Resources */,
+				80532FAB2542763C0012EA07 /* harpE.m4a in Resources */,
 				804300B8244609C20040E719 /* Main.storyboard in Resources */,
+				80532FB02542763C0012EA07 /* glockenspielA.m4a in Resources */,
+				80532F972542763C0012EA07 /* saxophoneE.m4a in Resources */,
 				805CF1E8245134490099703D /* pianoC.m4a in Resources */,
+				80532F8D2542763C0012EA07 /* trumpetC.m4a in Resources */,
 				805CF206245134860099703D /* guitarG.m4a in Resources */,
+				80532FA82542763C0012EA07 /* harpF.m4a in Resources */,
+				80532FAC2542763C0012EA07 /* harpD.m4a in Resources */,
+				80532FA92542763C0012EA07 /* harpG.m4a in Resources */,
+				80532F962542763C0012EA07 /* saxophoneA.m4a in Resources */,
+				80532FB32542763C0012EA07 /* glockenspielG.m4a in Resources */,
 				805CF201245134860099703D /* guitarB.m4a in Resources */,
 				80EA24C624460E7100F04808 /* InstructionsScreenStoryboard.storyboard in Resources */,
 				805CF202245134860099703D /* guitarA.m4a in Resources */,
+				80532FB42542763C0012EA07 /* glockenspielF.m4a in Resources */,
 				80BB97AF245B2681003F4C17 /* silenceNote.mp3 in Resources */,
 				805CF20A245134860099703D /* guitarE.m4a in Resources */,
 				804300BC244609DC0040E719 /* Assets.xcassets in Resources */,
+				80532FA72542763C0012EA07 /* harpB.m4a in Resources */,
+				80532F8A2542763C0012EA07 /* trumpetF.m4a in Resources */,
 				805CF1FF245134860099703D /* guitarF.m4a in Resources */,
+				80532F8F2542763C0012EA07 /* trumpetA.m4a in Resources */,
+				80532FA62542763C0012EA07 /* harpC.m4a in Resources */,
+				80532F892542763C0012EA07 /* trumpetD.m4a in Resources */,
 				805CF200245134860099703D /* guitarC.m4a in Resources */,
+				80532F982542763C0012EA07 /* saxophoneD.m4a in Resources */,
 				804300B5244609BC0040E719 /* LaunchScreen.storyboard in Resources */,
 				805CF1EA245134490099703D /* pianoB.m4a in Resources */,
+				80532F8B2542763C0012EA07 /* trumpetG.m4a in Resources */,
 				805CF1EB245134490099703D /* pianoF.m4a in Resources */,
+				80532FB22542763C0012EA07 /* glockenspielE.m4a in Resources */,
 				805CF1F0245134490099703D /* pianoE.m4a in Resources */,
 				805CF1E5245134490099703D /* pianoD.m4a in Resources */,
+				80532FAD2542763C0012EA07 /* glockenspielB.m4a in Resources */,
+				80532F9A2542763C0012EA07 /* saxophoneG.m4a in Resources */,
+				80532F942542763C0012EA07 /* saxophoneB.m4a in Resources */,
+				80532FA42542763C0012EA07 /* harpA.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
