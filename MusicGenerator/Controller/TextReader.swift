@@ -156,49 +156,49 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
     func playNote(from letter: String) {   // Recebe um caracter e interage com o SoundPlayer para tocar uma nota ou modificar o som
         
         if letter == "A" || letter == "a" {
-            soundPlayer.play(noteName: "A", completion: {
+            soundPlayer.play(noteName: "LA", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Si
         else if letter == "B" || letter == "b" {
-            soundPlayer.play(noteName: "B", completion: {
+            soundPlayer.play(noteName: "SI", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Dó
         else if letter == "C" || letter == "c" {
-            soundPlayer.play(noteName: "C", completion: {
+            soundPlayer.play(noteName: "DO", completion: {
                self.semaphore.signal()
             })
         }
             
         // Ré
         else if letter == "D" || letter == "d" {
-            soundPlayer.play(noteName: "D", completion: {
+            soundPlayer.play(noteName: "RE", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Mi
         else if letter == "E" || letter == "e" {
-            soundPlayer.play(noteName: "E", completion: {
+            soundPlayer.play(noteName: "MI", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Fá
         else if letter == "F" || letter == "f" {
-            soundPlayer.play(noteName: "F", completion: {
+            soundPlayer.play(noteName: "FA", completion: {
                 self.semaphore.signal()
             })
         }
             
         // Sol
         else if letter == "G" || letter == "g" {
-            soundPlayer.play(noteName: "G", completion: {
+            soundPlayer.play(noteName: "SOL", completion: {
                 self.semaphore.signal()
             })
         }
