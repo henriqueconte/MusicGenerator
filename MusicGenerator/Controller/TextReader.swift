@@ -15,7 +15,8 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
     private(set) var isReading: Bool = false
     private var lastRead: Character = " "
     
-    private var notes: [Character] = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g"]
+    private var uppercasedNotes: [Character] = ["A", "B", "C", "D", "E", "F", "G"]
+    private var undercasedNotes: [Character] = ["a", "b", "c", "d", "e", "f", "g"]
     private var stringCount: Int = 0
     
     private var isLastCharacter: Bool = false
@@ -248,7 +249,7 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
             
         // Nota aleatória
         else if letter == "?" || letter == "." {
-            let randomNote = String(notes.randomElement() ?? "a")
+            let randomNote = String(uppercasedNotes.randomElement() ?? "a")
             playNote(from: randomNote)
             
             self.semaphore.signal()
@@ -264,7 +265,7 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
         // Toca ultima nota tocada
         else if letter == "O" || letter == "o" || letter == "I" || letter == "i" || letter == "U" || letter == "u" {
             
-            if notes.contains(lastRead) {
+            if uppercasedNotes.contains(lastRead) {
                 playNote(from: String(lastRead))
                 self.semaphore.signal()
             }

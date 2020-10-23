@@ -12,4 +12,8 @@ import Foundation
 enum Instruments: String {
     case piano = "piano"
     case guitar = "guitar"
+    case glockenspiel = "glockenspiel"
+    case harp = "harp"
+    case saxophone = "saxophone"
+    case trumpet = "trumpet"
 }
