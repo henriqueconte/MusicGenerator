@@ -17,7 +17,7 @@ enum Instruments: String, CaseIterable {
     case saxophone = "saxophone"
     case trumpet = "trumpet"
     
-    static func getRandomInstrument()  ->  Instruments {
+    static func getRandomInstrument() -> Instruments {
         return Instruments.allCases.randomElement() ?? .piano
     }
 }

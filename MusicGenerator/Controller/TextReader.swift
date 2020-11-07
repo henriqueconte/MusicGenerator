@@ -286,8 +286,6 @@ class TextReader {
     }
     
     func resetPlayer() {   // Reinicializa o leitor e as configurações de som do SoundPlayer
-        print("reset")
-        
         lastRead = Character(".")
         stringCount = 0
         isReading = false
@@ -300,12 +298,10 @@ class TextReader {
     }
     
     func stopPlaying() {    // Comunica com o soundPlayer para proibir ele de tocar sons
-        print("stopped?")
         soundPlayer.stopPlaying()
     }
     
     func allowPlaying() {    // Comunica com o soundPlayer para permitir ele de tocar sons
-        print("allowed")
         soundPlayer.allowPlaying()
     }
     

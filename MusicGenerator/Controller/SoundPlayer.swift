@@ -39,7 +39,6 @@ class SoundPlayer {
     func play(noteName: String, completion: @escaping () -> ()) {
         
         if canPlay {
-            print("playing")
             let noteFileName = currentInstrument.rawValue + noteName
             let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: noteFileName, ofType: "m4a")!))
             let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))
@@ -60,8 +59,6 @@ class SoundPlayer {
     }
     
     func silence(completion: @escaping () -> ()) {
-        
-        print("silence")
         if canPlay {
             let audioFile = try? AVAudioFile(forReading: URL(fileURLWithPath: Bundle.main.path(forResource: "silenceNote", ofType: "mp3")!))
             let buffer = AVAudioPCMBuffer(pcmFormat: audioFile!.processingFormat, frameCapacity: AVAudioFrameCount(audioFile!.length))

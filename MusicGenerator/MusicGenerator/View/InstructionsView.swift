@@ -14,6 +14,5 @@ class InstructionsView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
