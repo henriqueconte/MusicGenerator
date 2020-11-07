@@ -80,20 +80,19 @@ class SoundPlayer {
 
     }
     
-    func toggleInstrument() {
-        if currentInstrument == .piano {
-            currentInstrument = .guitar
-        }
-        else {
-            currentInstrument = .piano
-        }
+    func changeInstrument(to newInstrument: Instruments) {
+        currentInstrument = newInstrument
+    }
+    
+    func changeToRandomInstrument() {
+        currentInstrument = Instruments.getRandomInstrument()
     }
     
     func increaseVolume() {
         volume = volume * 2
         
         if volume > 1 {
-            volume = 1
+            resetVolume()
         }
     }
     
@@ -103,6 +102,9 @@ class SoundPlayer {
     
     func increaseOctave() {
         pitchControl.pitch += 250
+        if pitchControl.pitch > 1500 {
+            resetPitch()
+        }
     }
     
     func decreaseOctave() {

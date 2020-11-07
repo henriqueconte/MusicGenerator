@@ -9,11 +9,15 @@
 import Foundation
 
 
-enum Instruments: String {
+enum Instruments: String, CaseIterable {
     case piano = "piano"
     case guitar = "guitar"
     case glockenspiel = "glockenspiel"
     case harp = "harp"
     case saxophone = "saxophone"
     case trumpet = "trumpet"
+    
+    static func getRandomInstrument()  ->  Instruments {
+        return Instruments.allCases.randomElement() ?? .piano
+    }
 }

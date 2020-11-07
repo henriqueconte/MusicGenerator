@@ -8,15 +8,17 @@
 
 import Foundation
 
-
-class TextReader {   // Responsável por ler uma string e interpretar quais ações serão tomadas
+// Responsável por ler uma string e interpretar quais ações serão tomadas
+class TextReader {
     
     public let soundPlayer = SoundPlayer()
     private(set) var isReading: Bool = false
     private var lastRead: Character = " "
     
-    private var uppercasedNotes: [Character] = ["A", "B", "C", "D", "E", "F", "G"]
-    private var undercasedNotes: [Character] = ["a", "b", "c", "d", "e", "f", "g"]
+    private let uppercasedNotes: [Character] = ["A", "B", "C", "D", "E", "F", "G"]
+    private let lowercasedNotes: [Character] = ["a", "b", "c", "d", "e", "f", "g"]
+    private let consonantsList: [Character] = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z", "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+    private let numbersList: [Character] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     private var stringCount: Int = 0
     
     private var isLastCharacter: Bool = false
@@ -24,7 +26,8 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
     
     private var semaphore = DispatchSemaphore(value: 0)
     
-    func read(_ currentString: String) {    // Lê uma string e separa em conjuntos de dois e três caracteres
+    // Lê uma string e separa em conjuntos de dois e três caracteres, pois podemos ter casos como o NL, e antigamente tinhamos o B+, O+ etc, então é bom estarmos preparados para adicionar funcionalidades que envolvam dois ou três caracteres no futuro.
+    func read(_ currentString: String) {
         
         let stringArray = Array(currentString)
         stringCount = 0
@@ -100,8 +103,7 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
         // Se for os dois primeiros ou dois últimos caracteres do texto
         else if charsArray.count == 2 {
             
-            if ((charsArray[0] == "B" || charsArray[0] == "O") && (charsArray[1] == "+" || charsArray[1] == "-")) ||
-            (charsArray[0] == "N" && charsArray[1] == "L" ) {
+            if charsArray[0] == "N" && charsArray[1] == "L"  {
                 
                 var finalString: String = ""
                 finalString.append(charsArray[0])
@@ -127,8 +129,7 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
         // Se não é nem os dois primeiros nem os dois últimos caracteres
         else if charsArray.count == 3 {
             
-            if ((charsArray[1] == "B" || charsArray[1] == "O") && (charsArray[2] == "+" || charsArray[2] == "-")) ||
-               (charsArray[1] == "N" && charsArray[2] == "L" ) {
+            if charsArray[1] == "N" && charsArray[2] == "L" {
                 
                 var finalString: String = ""
                 finalString.append(charsArray[1])
@@ -156,130 +157,126 @@ class TextReader {   // Responsável por ler uma string e interpretar quais aç�
     
     func playNote(from letter: String) {   // Recebe um caracter e interage com o SoundPlayer para tocar uma nota ou modificar o som
         
-        if letter == "A" || letter == "a" {
+        // Lá
+        if letter == "A" {
             soundPlayer.play(noteName: "LA", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Si
-        else if letter == "B" || letter == "b" {
+        else if letter == "B" {
             soundPlayer.play(noteName: "SI", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Dó
-        else if letter == "C" || letter == "c" {
+        else if letter == "C" {
             soundPlayer.play(noteName: "DO", completion: {
-               self.semaphore.signal()
+                self.semaphore.signal()
             })
         }
             
         // Ré
-        else if letter == "D" || letter == "d" {
+        else if letter == "D" {
             soundPlayer.play(noteName: "RE", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Mi
-        else if letter == "E" || letter == "e" {
+        else if letter == "E" {
             soundPlayer.play(noteName: "MI", completion: {
                 self.semaphore.signal()
             })
         }
         
         // Fá
-        else if letter == "F" || letter == "f" {
+        else if letter == "F" {
             soundPlayer.play(noteName: "FA", completion: {
                 self.semaphore.signal()
             })
         }
             
         // Sol
-        else if letter == "G" || letter == "g" {
+        else if letter == "G" {
             soundPlayer.play(noteName: "SOL", completion: {
                 self.semaphore.signal()
             })
         }
         
-        // Silencio
-        else if letter == " " {
-            soundPlayer.silence(completion: {
-                self.semaphore.signal()
-            })
-        }
-        
-        // Dobra volume
-        else if letter == "+" {
-            soundPlayer.increaseVolume()
-            self.semaphore.signal()
-        }
-        
-        // Reseta volume
-        else if letter == "-" || letter == "—" {
-            soundPlayer.resetVolume()
-            self.semaphore.signal()
-        }
-        
-        // Aumenta BPM
-        else if letter == "B+" {
-            soundPlayer.increaseBPM()
-            self.semaphore.signal()
-        }
-        
-        // Diminui BPM
-        else if letter == "B-" {
-            soundPlayer.decreaseBPM()
-            self.semaphore.signal()
-        }
-        
-        // Aumenta oitava
-        else if letter == "O+" {
-            soundPlayer.increaseOctave()
-            self.semaphore.signal()
-        }
-            
-        // Diminui oitava
-        else if letter == "O-" {
-            soundPlayer.decreaseOctave()
-            self.semaphore.signal()
-        }
-            
-        // Nota aleatória
-        else if letter == "?" || letter == "." {
-            let randomNote = String(uppercasedNotes.randomElement() ?? "a")
-            playNote(from: randomNote)
-            
-            self.semaphore.signal()
-        }
-            
-        // Muda instrumento
+        // Muda instrumento para o Tubular Bells (que utilizei um similar, chamado Glockenspiel)
         else if letter == "NL" {
-            soundPlayer.toggleInstrument()
-            
-            self.semaphore.signal()
+            soundPlayer.changeInstrument(to: .glockenspiel)
+            semaphore.signal()
         }
         
-        // Toca ultima nota tocada
-        else if letter == "O" || letter == "o" || letter == "I" || letter == "i" || letter == "U" || letter == "u" {
-            
+        // Toca última nota tocada ou silêncio
+        else if lowercasedNotes.contains(Character(letter)) || consonantsList.contains(Character(letter)) {
             if uppercasedNotes.contains(lastRead) {
                 playNote(from: String(lastRead))
-                self.semaphore.signal()
+                semaphore.signal()
             }
             else {
-                // silence
                 soundPlayer.silence {
                     self.semaphore.signal()
                 }
             }
-    
         }
+        
+        // Silencio
+        else if letter == " " {
+            soundPlayer.increaseVolume()
+            semaphore.signal()
+        }
+        
+        // Muda instrumento para o Agogo (que utilizei um similar, chamado Saxophone)
+        else if letter == "!" {
+            soundPlayer.changeInstrument(to: .saxophone)
+            semaphore.signal()
+        }
+        
+        // Muda instrumento para o Harpsichord (que utilizei um similar, chamado Piano)
+        else if letter == "O" || letter == "o" || letter == "I" || letter == "i" || letter == "U" || letter == "u" {
+            soundPlayer.changeInstrument(to: .piano)
+        }
+        
+        // Idealmente, deveria mudar para o instrumento General MIDI. Entretanto, como não estou utilizando diretamente os instrumentos do MIDI, irei escolher um instrumento aleatório entre os existentes no projeto.
+        else if numbersList.contains(Character(letter)) {
+            soundPlayer.changeToRandomInstrument()
+            semaphore.signal()
+        }
+        
+        // Aumenta oitava e reseta caso não consiga aumentar mais
+        else if letter == "?" {
+            soundPlayer.increaseOctave()
+            semaphore.signal()
+        }
+    
+        // Muda instrumento para a Pan Flute (que utilizei um similar, chamado Trumpet)
+        else if letter == ";" {
+            soundPlayer.changeInstrument(to: .harp)
+            semaphore.signal()
+        }
+            
+        // Muda instrumento para o Church Organ (que utilizei um similar, chamado Trumpet)
+        else if letter == "," {
+            soundPlayer.changeInstrument(to: .trumpet)
+            semaphore.signal()
+        }
+    
         // Nenhum dos caracteres acima
         else {
-            self.semaphore.signal()
+            if uppercasedNotes.contains(lastRead) {
+                playNote(from: String(lastRead))
+                semaphore.signal()
+            }
+            else {
+                soundPlayer.silence {
+                    self.semaphore.signal()
+                }
+            }
         }
         
         if isLastCharacter {
