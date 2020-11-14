@@ -10,15 +10,15 @@ import UIKit
 
 class MainScreenView: UIViewController {
 
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var inputTextfield: UITextField!
-    @IBOutlet weak var caseBackgroundImage: UIImageView!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var generateSongButton: UIButton!
-    @IBOutlet weak var instructionsButton: UIButton!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var openFileButton: UIButton!
+    @IBOutlet weak private var backgroundImage: UIImageView!
+    @IBOutlet weak private var inputTextfield: UITextField!
+    @IBOutlet weak private var caseBackgroundImage: UIImageView!
+    @IBOutlet weak private var playButton: UIButton!
+    @IBOutlet weak private var stopButton: UIButton!
+    @IBOutlet weak private var generateSongButton: UIButton!
+    @IBOutlet weak private var instructionsButton: UIButton!
+    @IBOutlet weak private var saveButton: UIButton!
+    @IBOutlet weak private var openFileButton: UIButton!
     
     let textGenerator: TextGenerator = TextGenerator()
     var textReader: TextReader = TextReader()

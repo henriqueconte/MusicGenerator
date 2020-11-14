@@ -61,11 +61,22 @@
 		8090F5F3244DEFC900E00E80 /* TextGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F2244DEFC900E00E80 /* TextGenerator.swift */; };
 		8090F5F5244F4A3200E00E80 /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F4244F4A3200E00E80 /* TextReader.swift */; };
 		8090F5F7244F4C2000E00E80 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */; };
+		8096713A255D88720088C976 /* MusicGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80967139255D88720088C976 /* MusicGeneratorTests.swift */; };
 		80B805A9253271140039DD3E /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B805A8253271140039DD3E /* Alerts.swift */; };
 		80BB97AF245B2681003F4C17 /* silenceNote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80BB97AE245B2681003F4C17 /* silenceNote.mp3 */; };
 		80EA24C624460E7100F04808 /* InstructionsScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80EA24C524460E7100F04808 /* InstructionsScreenStoryboard.storyboard */; };
 		80EA24C824460E8C00F04808 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA24C724460E8C00F04808 /* InstructionsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8096713C255D88720088C976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FB431F244601C000F54884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80FB4326244601C000F54884;
+			remoteInfo = MusicGenerator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		804300B1244609AC0040E719 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +134,9 @@
 		8090F5F2244DEFC900E00E80 /* TextGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextGenerator.swift; path = Controller/TextGenerator.swift; sourceTree = SOURCE_ROOT; };
 		8090F5F4244F4A3200E00E80 /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextReader.swift; path = Controller/TextReader.swift; sourceTree = SOURCE_ROOT; };
 		8090F5F6244F4C2000E00E80 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = Controller/SoundPlayer.swift; sourceTree = SOURCE_ROOT; };
+		80967137255D88720088C976 /* MusicGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80967139255D88720088C976 /* MusicGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicGeneratorTests.swift; sourceTree = "<group>"; };
+		8096713B255D88720088C976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B805A8253271140039DD3E /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		80BB97AE245B2681003F4C17 /* silenceNote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silenceNote.mp3; sourceTree = "<group>"; };
 		80EA24C524460E7100F04808 /* InstructionsScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InstructionsScreenStoryboard.storyboard; sourceTree = "<group>"; };
@@ -131,6 +145,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		80967134255D88720088C976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80FB4324244601C000F54884 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +302,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		80967138255D88720088C976 /* MusicGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				80967139255D88720088C976 /* MusicGeneratorTests.swift */,
+				8096713B255D88720088C976 /* Info.plist */,
+			);
+			path = MusicGeneratorTests;
+			sourceTree = "<group>";
+		};
 		80BB97B0245B3202003F4C17 /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +325,7 @@
 				80FB4329244601C000F54884 /* MusicGenerator */,
 				804300B6244609C20040E719 /* Main.storyboard */,
 				804300B3244609BC0040E719 /* LaunchScreen.storyboard */,
+				80967138255D88720088C976 /* MusicGeneratorTests */,
 				80FB4328244601C000F54884 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -303,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				80FB4327244601C000F54884 /* MusicGenerator.app */,
+				80967137255D88720088C976 /* MusicGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +354,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		80967136255D88720088C976 /* MusicGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80967140255D88720088C976 /* Build configuration list for PBXNativeTarget "MusicGeneratorTests" */;
+			buildPhases = (
+				80967133255D88720088C976 /* Sources */,
+				80967134255D88720088C976 /* Frameworks */,
+				80967135255D88720088C976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8096713D255D88720088C976 /* PBXTargetDependency */,
+			);
+			name = MusicGeneratorTests;
+			productName = MusicGeneratorTests;
+			productReference = 80967137255D88720088C976 /* MusicGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		80FB4326244601C000F54884 /* MusicGenerator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80FB433B244601C100F54884 /* Build configuration list for PBXNativeTarget "MusicGenerator" */;
@@ -345,10 +395,14 @@
 		80FB431F244601C000F54884 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Henrique Figueiredo Conte";
 				TargetAttributes = {
+					80967136255D88720088C976 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 80FB4326244601C000F54884;
+					};
 					80FB4326244601C000F54884 = {
 						CreatedOnToolsVersion = 11.4;
 						LastSwiftMigration = 1140;
@@ -369,11 +423,19 @@
 			projectRoot = "";
 			targets = (
 				80FB4326244601C000F54884 /* MusicGenerator */,
+				80967136255D88720088C976 /* MusicGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		80967135255D88720088C976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80FB4325244601C000F54884 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +494,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		80967133255D88720088C976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8096713A255D88720088C976 /* MusicGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80FB4323244601C000F54884 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,6 +520,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8096713D255D88720088C976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80FB4326244601C000F54884 /* MusicGenerator */;
+			targetProxy = 8096713C255D88720088C976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		804300B3244609BC0040E719 /* LaunchScreen.storyboard */ = {
@@ -471,6 +549,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8096713E255D88720088C976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NP5AK64M5;
+				INFOPLIST_FILE = MusicGeneratorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = henriqueConte.MusicGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicGenerator.app/MusicGenerator";
+			};
+			name = Debug;
+		};
+		8096713F255D88720088C976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NP5AK64M5;
+				INFOPLIST_FILE = MusicGeneratorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = henriqueConte.MusicGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MusicGenerator.app/MusicGenerator";
+			};
+			name = Release;
+		};
 		80FB4339244601C100F54884 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -627,6 +749,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		80967140255D88720088C976 /* Build configuration list for PBXNativeTarget "MusicGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8096713E255D88720088C976 /* Debug */,
+				8096713F255D88720088C976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		80FB4322244601C000F54884 /* Build configuration list for PBXProject "MusicGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -14,11 +14,11 @@ class SoundPlayer {
     
     private let engine = AVAudioEngine()
     private let speedControl = AVAudioUnitVarispeed()
-    private let pitchControl = AVAudioUnitTimePitch()
+    private(set) var pitchControl = AVAudioUnitTimePitch()
     private let audioPlayer = AVAudioPlayerNode()
-    private var currentInstrument: Instruments = .guitar
-    private var volume: Float = 0.1
-    private var canPlay: Bool = true
+    private(set) var currentInstrument: Instruments = .guitar
+    private(set) var volume: Float = 0.1
+    private(set) var canPlay: Bool = true
     
     init() {
          // 1: conecta os componentes na nossa engine de som
