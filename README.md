@@ -17,3 +17,10 @@ Music Generator is an assignment for Software Construction Techniques. Besides, 
 
 # Screens
 
+The layout was previously made by me using Sketch, and then replicated on the project. 
+
+![](print1.png)
+
+![](print2.png)
+
+![](print3.png)
