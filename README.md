@@ -1,6 +1,6 @@
 # Music Generator
 
-Music Generator is an assignment for Software Construction Techniques. Besides, the objective of the assignment was to create an audio player that plays according to the text inputed by the user. Therefore, the software contains the following features:
+Music Generator is an assignment for Software Construction Techniques. Besides, the objective of the assignment was to create an audio player that plays according to the text inputted by the user. Therefore, the software contains the following features:
 
 * Sound played based on the text read
 * Pitch modification
